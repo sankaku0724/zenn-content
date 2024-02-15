@@ -8,7 +8,7 @@ topics:
   - "ipa"
   - "基本情報技術者試験"
   - "情報セキュリティマネジメント試験"
-published: true
+published: false
 ---
 
 ## はじめに
