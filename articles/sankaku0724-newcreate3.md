@@ -8,7 +8,7 @@ topics:
   - "discord"
   - "discordbot"
   - "raspberrypi"
-published: false
+published: true
 ---
 
 ## はじめに
@@ -34,7 +34,17 @@ https://gafuburo.net/how-to-discordbot/#toc5
 
 ## PythonでDiscord Botを動かしてメッセージ送信できるようにしてみよう
 
-zundamon.pyというファイルを作成し、以下の内容のように書き込みました。このプログラムはmsglistの中に格納されているテキストをランダムで一つ選んで送信するようになっています。
+まず、Raspberry Pi上で以下のコマンドを実行して、discord.pyのインストールを行いました。
+```
+pip install discord.py
+```
+
+:::message
+このコマンドは環境に応じて適切なものを使用してください。
+:::
+
+
+そして、zundamon.pyというファイルを作成し、以下のように書き込みました。このプログラムはmsglistの中に格納されているテキストをランダムで一つ選んで送信するようになっています。
 
 ```py:zundamon
 import discord
