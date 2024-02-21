@@ -16,7 +16,7 @@ published: true
 今回は「**はじめてのDiscord BotをPythonで動かしてみた**」ということで記事を書いてみました。
 拙い文章ではありますが、よろしくお願いします。
 
-この記事は私がDiscord Botを初めて作成し、Pythonを用いてRaspberry Pi上で動かしてみた際の話になります。
+この記事は私がDiscord Botを初めて作成し、Pythonを用いてRaspberry Pi上で動かして、メッセージ送信できるようにした際の話になります。
 少しでも参考になれば幸いです。
 
 
