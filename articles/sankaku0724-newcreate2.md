@@ -1,6 +1,6 @@
 ---
 title: "応用情報技術者試験を受けてみた話"
-emoji: "✌️"
+emoji: "😊"
 type: "idea"
 topics:
   - "勉強法"
