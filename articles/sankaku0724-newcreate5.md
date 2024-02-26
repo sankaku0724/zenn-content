@@ -52,13 +52,20 @@ https://www.deviantart.com/marcoszone/art/Handwii-44077926
 
 ### カーソル変更
 
-先ほどの𝕏の投稿者の方は[Windowsのカーソルを変更する方法について紹介していました](https://twitter.com/anal_ikiikisuto/status/1733830574119469193)が，私が所持していたのはMacBookAirでした．また，Windowsでは設定からカーソルを簡単に変更できるらしいのですが，Macではそのようなことができません．
+先ほどの𝕏の投稿者の方は[Windowsのカーソルを変更する方法について紹介していました](https://twitter.com/anal_ikiikisuto/status/1733830574119469193)が，私が所持していたのはMacBookAirです．また，Windowsでは設定からカーソルを簡単に変更できるらしいのですが，Macではそのようなことができません．
 
 そこで，macOS向けのカスタムマウスカーソルの作成と管理ができる**Mousecape**というツールを使用しました．これもまた，無料で使用することができます．
 
-Mousecapeは以下のリンクからダウンロードすることができます。もし，権限を求められた場合は許可しましょう。
+Mousecapeは以下のリンクから入手することができます。Mousecape_1813.zipをダウンロードして解凍しましょう．
 
-https://github.com/alexzielenski/Mousecape
+https://github.com/alexzielenski/Mousecape/releases
+
+アプリを開こうとした際に，悪質なソフトウェアであるかどうかAppleで確認できない旨のメッセージが表示され，開くことができない場合があります．
+
+![](/images/sankaku5/mouse1.png)
+
+[macOSユーザガイド](https://support.apple.com/ja-jp/guide/mac-help/mchleab3a043/mac)によると，Controlキーを押しながらアプリアイコンをクリックして、ショートカットメニューから「開く」を選択してクリックすることで，セキュリティ設定の例外として保存され、いつでもダブルクリックすることで開くことができるようになるとのことだったので，その手順を実行して解決しました。
+
 
 そして，
 
@@ -67,7 +74,7 @@ https://github.com/alexzielenski/Mousecape
 
 ## 結果
 
-MacBookAirのマウスカーソルの見た目をWiiリモコンのポインターに変更し，当初の目的を達成することができました！
+MacBookAirのマウスカーソルの見た目をWiiリモコンのポインターに変更することができました！
 
 ![](/images/sankaku5/wiiresult.png)
 
@@ -76,14 +83,14 @@ MacBookAirのマウスカーソルの見た目をWiiリモコンのポインタ�
 
 また，Mousecape上で`command+Enter`を入力するとwiiを適応、`command+R`を入力するとデフォルトに戻すことができるのでお手軽です！
 
-私はカーソルをWiiにした状態で，任天堂のWii公式サイトにアクセスしてWiiの気分を味わって楽しんでいます．
+私はカーソルをWiiにした状態で，任天堂のWii公式サイトにアクセスし，Wiiの気分を味わって楽しんでいます．
 
 https://www.nintendo.co.jp/wii/rhaj/mii/index.html
 
 昔から「病は気から」と言いますし，
 
 ## さいごに
-ここまで記事を読んでくださりありがとうございました！
+ここまで記事を読んでくださり，ありがとうございました！
 
 今回，私はWii仕様に変更しましたが，別の画像を適応させることもできます！推しの画像に変更するといったこともでき，自由自在です！
 
