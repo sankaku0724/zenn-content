@@ -46,7 +46,7 @@ pip install discord.py
 
 そして、zundamon.pyというファイルを作成し、以下のように書き込みました。このプログラムはmsglistの中に格納されているテキストをランダムで一つ選んで送信するようになっています。
 
-```py:zundamon
+```py:zundamon.py
 import discord
 from discord.ext import commands
 import random
