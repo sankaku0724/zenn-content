@@ -56,7 +56,7 @@ LINEアカウントでログインし、右上にある自身のアカウント�
 
 LINE.pyというファイルを作成し、以下のように書き込みました。
 
-```py:LINE
+```py:LINE.py
 import requests
 
 linemsg = 'Raspberry Piからの通知だよ!'
@@ -73,8 +73,9 @@ def LINE_message(msg):
 
 LINE_message(linemsg)
 ```
-以下に、プログラムの各部分の説明をします。
+以下に、プログラムの説明をします。
 
+-----
 1. `import requests`: `requests`モジュールをインポートします。このモジュールは、HTTPリクエストを送信するためのPythonライブラリです。
 
 2. `linemsg = 'Raspberry Piからの通知だよ!'`: 送信するメッセージを定義します。ここでは、"Raspberry Piからの通知だよ!"というメッセージが`linemsg`変数に格納されています。
@@ -94,6 +95,8 @@ LINE_message(linemsg)
 9. `r = requests.post(url, headers = headers, params=payload)`: POSTリクエストを使用してLINE Notifyにメッセージを送信します。`url`はエンドポイント、`headers`はヘッダー、`payload`はデータを指定します。
 
 10. `LINE_message(linemsg)`: 実際に`LINE_message`関数を呼び出し、`linemsg`変数に格納されたメッセージを送信します。
+
+-----
 
 このプログラムをRaspberry Pi上で実行すると、linemsgに格納した文章をLINEに送信することができました。
 
