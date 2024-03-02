@@ -102,7 +102,7 @@ LINE_message(linemsg)
 
 ![](/images/sankaku4/line7.png)
 
-格納する文章を変更することで、睡蓮花を送信してみたり⋯
+格納する文章を変更することで、[睡蓮花](https://www.youtube.com/watch?v=PjGbnPYwt1g)を送信してみたり⋯
 
 ![](/images/sankaku4/line8.png)
 
