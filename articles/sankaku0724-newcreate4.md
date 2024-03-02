@@ -68,7 +68,7 @@ token = "xxxxxxxx" # アクセストークンに置き換えてください
 
 #LINEメッセージ送信の関数
 def LINE_message(msg):
-  # APIエンドポイントのURLの定義
+  # APIエンドポイントのURLを定義
   url = "https://notify-api.line.me/api/notify"
   # HTTPリクエストヘッダーの設定 
   headers = {"Authorization" : "Bearer "+ token}
