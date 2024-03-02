@@ -8,7 +8,7 @@ topics:
   - "linenotify"
   - "python"
   - "raspberrypi"
-published: false
+published: true
 ---
 
 ## はじめに
