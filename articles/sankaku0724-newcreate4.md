@@ -57,23 +57,33 @@ LINEアカウントでログインし、右上にある自身のアカウント�
 LINE.pyというファイルを作成し、以下のように書き込みました。
 
 ```py:LINE.py
+# requestsモジュールのインポート
 import requests
 
+# 送信するメッセージを定義
 linemsg = 'Raspberry Piからの通知だよ!'
 
+# LINE Notifyのアクセストークンを定義
 token = "xxxxxxxx" # アクセストークンに置き換えてください
 
 #LINEメッセージ送信の関数
 def LINE_message(msg):
-    url = "https://notify-api.line.me/api/notify" 
-    headers = {"Authorization" : "Bearer "+ token}
-    message =  (msg)
-    payload = {"message" :  message} 
-    r = requests.post(url, headers = headers, params=payload)
+  # APIエンドポイントのURLの定義
+  url = "https://notify-api.line.me/api/notify"
+  # HTTPリクエストヘッダーの設定 
+  headers = {"Authorization" : "Bearer "+ token}
+  # 送信するメッセージの設定
+  message =  (msg)
+  # ペイロードの設定
+  payload = {"message" :  message}
+  # POSTリクエストの使用 
+  r = requests.post(url, headers = headers, params=payload)
 
+# 関数の呼び出し
 LINE_message(linemsg)
 ```
-以下に、プログラムの説明をします。
+
+以下に、プログラムの詳細な説明をします。
 
 -----
 1. `import requests`: `requests`モジュールをインポートします。このモジュールは、HTTPリクエストを送信するためのPythonライブラリです。
