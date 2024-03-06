@@ -57,14 +57,11 @@ https://github.com/alexzielenski/Mousecape/releases
 この問題を解決する方法を調べると、[macOSユーザガイド](https://support.apple.com/ja-jp/guide/mac-help/mchleab3a043/mac)に解決方法が記載されていました。
 **Controlキーを押しながらアプリアイコンをクリックして、ショートカットメニューから「開く」を選択してクリックする**ことで、セキュリティ設定の例外として保存され、いつでもダブルクリックすることで開くことができるようになるとのことです。私はその手順を実行して解決しました。
 
-
 そして、以下のサイトを参考にさせていただき、カーソルを設定しました。
 
 https://note.com/rocky_mountains/n/n5a300c96badd
 
 https://note.com/yaenbibi/n/nb762d12f2ccb#a4d7cf7f-f227-4e1b-92c0-cfe6f91dffb0
-
-
 
 一応、大雑把な手順の解説をします。
 
@@ -76,7 +73,7 @@ https://note.com/yaenbibi/n/nb762d12f2ccb#a4d7cf7f-f227-4e1b-92c0-cfe6f91dffb0
 自身がわかりやすいようにNameとAuthorを変更しましょう。私はここでtestとsankakuと名付けてあります。
 ![](/images/sankaku5/mouse4.png)
 
-ここで、一番下にあるRetinaについて調べてみましたが、あまりよくわかりませんでした。そこで、[Chat GPT](https://chat.openai.com/)に質問を投げてみると、
+ここで、一番下にあるRetinaについて調べてみましたが、あまりよくわかりませんでした。そこで、Chat GPTに質問してみると、
 
 > 「Mousecape」は、macOS用のカーソルテーマを管理するためのユーティリティアプリケーションです。そして「retina」という言葉は、高解像度のディスプレイを指すことが一般的です。
 > 一般的に、"Retina" ディスプレイは、通常のディスプレイよりも高いピクセル密度を持ち、より鮮明な画像を提供します。そのため、"Mousecape"の"retina"という用語は、高解像度ディスプレイ向けのカーソルテーマである可能性があります。つまり、解像度が高いディスプレイでカーソルを鮮明に表示するための特別なテーマを指すかもしれません。
