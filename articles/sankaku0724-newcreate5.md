@@ -7,7 +7,7 @@ topics:
   - "カーソル"
   - "macbook"
   - "m1mac"
-  - "Wii"
+  - "macbookair"
 published: false
 ---
 
