@@ -46,7 +46,7 @@ https://www.deviantart.com/marcoszone/art/Handwii-44077926
 
 そこで、macOS向けのカスタムマウスカーソルの作成と管理ができる**Mousecape**というツールを使用しました。これもまた、無料で使用することができます。
 
-Mousecapeは以下のリンクから入手することができます。Mousecape_1813.zipをダウンロードして展開しましょう。
+Mousecapeは以下のリンクから入手することができます。**Mousecape_1813.zipをダウンロードして展開**しましょう。展開した後は、アプリケーション一覧に入れておくと良いでしょう。
 
 https://github.com/alexzielenski/Mousecape/releases
 
@@ -54,7 +54,7 @@ https://github.com/alexzielenski/Mousecape/releases
 
 ![](/images/sankaku5/mouse1.png)
 
-そこで、この問題を解決する方法を調べると、[macOSユーザガイド](https://support.apple.com/ja-jp/guide/mac-help/mchleab3a043/mac)に解決方法が記載されていました。
+この問題を解決する方法を調べると、[macOSユーザガイド](https://support.apple.com/ja-jp/guide/mac-help/mchleab3a043/mac)に解決方法が記載されていました。
 **Controlキーを押しながらアプリアイコンをクリックして、ショートカットメニューから「開く」を選択してクリックする**ことで、セキュリティ設定の例外として保存され、いつでもダブルクリックすることで開くことができるようになるとのことです。私はその手順を実行して解決しました。
 
 
@@ -76,7 +76,7 @@ https://note.com/yaenbibi/n/nb762d12f2ccb#a4d7cf7f-f227-4e1b-92c0-cfe6f91dffb0
 自身がわかりやすいようにNameとAuthorを変更しましょう。私はここでtestとsankakuと名付けてあります。
 ![](/images/sankaku5/mouse4.png)
 
-ここで、一番下にあるRetinaについて調べてみましたが、あまりよくわかりませんでした。Chat GPTに質問を投げてみると、
+ここで、一番下にあるRetinaについて調べてみましたが、あまりよくわかりませんでした。そこで、[Chat GPT](https://chat.openai.com/)に質問を投げてみると、
 
 > 「Mousecape」は、macOS用のカーソルテーマを管理するためのユーティリティアプリケーションです。そして「retina」という言葉は、高解像度のディスプレイを指すことが一般的です。
 > 一般的に、"Retina" ディスプレイは、通常のディスプレイよりも高いピクセル密度を持ち、より鮮明な画像を提供します。そのため、"Mousecape"の"retina"という用語は、高解像度ディスプレイ向けのカーソルテーマである可能性があります。つまり、解像度が高いディスプレイでカーソルを鮮明に表示するための特別なテーマを指すかもしれません。
@@ -89,7 +89,7 @@ https://note.com/yaenbibi/n/nb762d12f2ccb#a4d7cf7f-f227-4e1b-92c0-cfe6f91dffb0
 
 1xの部分に取得した画像をそれぞれドラッグ&ドロップして設定しました。
 
-ちなみに私は以下の六つのカーソル設定をしました。この要素は先ほど紹介したサイトを参考にさせていただき、設定しています。
+ちなみに私は以下の六つの項目の設定をしました。この項目は先ほど紹介したサイトを参考にさせていただき、設定しています。
 1. Arrow
 wii_normal.curを適応。
 2. Busy
@@ -103,7 +103,7 @@ wii_help.curを適応。
 6. Pointing
 wii_url_big.curを適応。
 
-これにより、設定したカーソルの状態の時にWii仕様に変更されます。
+設定が終了した際は保存し、ダブルクリックをするか`⌘(command)+⏎`を入力することで、設定したカーソルの状態(今回はWii仕様)に変更されるはずです。
 
 ## 結果
 
@@ -111,10 +111,9 @@ MacBook Airのマウスカーソルの見た目をWiiリモコンのポインタ
 
 ![](/images/sankaku5/wiiresult.png)
 
-
 カーソルを変更することで、PCなのに**Wiiで遊んでいるような錯覚に陥ることができます！！！**
 
-また、Mousecape上で`command+Enter`を入力すると設定した画像を適応、`command+R`を入力するとデフォルトに戻すことができるのでお手軽です！
+また、Mousecape上で`⌘(command)+R`を入力するとデフォルトに戻すことができるのでお手軽です！
 
 私はカーソルをWiiにした状態で、任天堂のWii公式サイトにアクセスし、Wiiの気分を味わって楽しんでいます。
 
