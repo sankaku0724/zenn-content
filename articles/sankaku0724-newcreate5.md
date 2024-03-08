@@ -19,11 +19,11 @@ published: false
 少しでも参考になれば幸いです。
 
 ## 経緯
-なぜ私がMacのカーソルをWii仕様に変更しようとしたかというと、𝕏（旧Twitter）でWindowsのカーソルをWiiリモコンのポインターにしている投稿が流れてきたからです。
+なぜ私がMacのカーソルをWii仕様に変更しようとしたかというと、𝕏（旧Twitter）でWindowsのカーソルをWiiリモコンのポインターに変更している投稿が流れてきたからです。
 
 https://twitter.com/anal_ikiikisuto/status/1733815289383624865
 
-すごい！自分もこれやってみたい！と思った単純な私は、即座に真似をしようと決意しました。
+すごい！自分もこれやってみたい！と思った単純な私は、即座に変更しようと決意しました。
 
 ## 手順
 
@@ -42,7 +42,7 @@ https://www.deviantart.com/marcoszone/art/Handwii-44077926
 
 ### カーソル変更
 
-先ほどの𝕏の投稿者の方は[Windowsのカーソルを変更する方法について紹介していました](https://twitter.com/anal_ikiikisuto/status/1733830574119469193)が、私が所持しているのはMacBook Airでした。また、Windowsでは設定からカーソルを簡単に変更できるらしいのですが、Macではそのようなことができません。
+先ほどの𝕏の投稿者の方は[Windowsのカーソルを変更する方法について紹介していました](https://twitter.com/anal_ikiikisuto/status/1733830574119469193)が、私が所持しているのはMacBook Airでした。また、Windowsでは設定からカーソルを変更できるらしいのですが、Macではそのようなことができません。
 
 そこで、macOS向けのカスタムマウスカーソルの作成と管理ができる**Mousecape**というツールを使用しました。これもまた、無料で使用することができます。
 
@@ -87,17 +87,17 @@ https://note.com/yaenbibi/n/nb762d12f2ccb#a4d7cf7f-f227-4e1b-92c0-cfe6f91dffb0
 1xの部分に取得した画像をそれぞれドラッグ&ドロップして設定しました。
 
 ちなみに私は以下の六つの項目の設定をしました。この項目は先ほど紹介したサイトを参考にさせていただき、設定しています。
-1. Arrow
+1. `Arrow`
 wii_normal.curを適応。
-2. Busy
+2. `Busy`
 wii_busy2.curを適応。
-3. Closed
+3. `Closed`
 wii_url_mini.curを適応。
-4. Forbidden
+4. `Forbidden`
 wii_invalid.curを適応。
-5. Help
+5. `Help`
 wii_help.curを適応。
-6. Pointing
+6. `Pointing`
 wii_url_big.curを適応。
 
 設定が終了した際は保存し、ダブルクリックをするか`⌘(command)+⏎`を入力することで、設定したカーソルの状態(今回はWii仕様)に変更されるはずです。
