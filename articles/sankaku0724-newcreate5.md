@@ -5,9 +5,9 @@ type: "tech"
 topics:
   - "mac"
   - "カーソル"
+  - "apple"
+  - "m1"
   - "macbook"
-  - "m1mac"
-  - "macbookair"
 published: false
 ---
 
