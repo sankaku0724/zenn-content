@@ -1,6 +1,6 @@
 ---
 title: "MacのカーソルをWiiにしてみた"
-emoji: "🎮"
+emoji: "☝️"
 type: "tech"
 topics:
   - "mac"
