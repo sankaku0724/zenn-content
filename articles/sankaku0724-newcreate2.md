@@ -18,10 +18,11 @@ published: false
 この記事は，普通科高校出身であり，大学に入学するまでPCを触った経験もあまりなく，プログラミングや情報についての知識が全く0の状態だった私の体験記になります．
 
 :::message
-私は基本情報技術者試験と情報セキュリティマネジメント試験を所持しているため，それらに関する知識をある程度保有している状態で勉強を始めています．
-そのため，「[基本情報技術者試験と情報セキュリティマネジメント試験を受けてみた話](https://zenn.dev/joho0724/articles/sankaku0724-newcreate1)」という以前私が書いた記事を参考にしていただけたらと思います。
+私は基本情報技術者試験と情報セキュリティマネジメント試験に合格しているため，それらに関する知識をある程度保有している状態で勉強を始めています．
+そのため，「基本情報技術者試験と情報セキュリティマネジメント試験を受けてみた話」という以前私が書いた記事も参考にしていただけたらと思います。
 :::
 
+https://zenn.dev/joho0724/articles/sankaku0724-newcreate1
 
 少しでも参考になれば幸いです．
 
@@ -120,6 +121,10 @@ https://www.fe-siken.com/fekakomon.php
 
 
 #### 科目A
+
+https://www.amazon.co.jp/%E3%82%AD%E3%82%BF%E3%83%9F%E5%BC%8F%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88IT%E5%A1%BE-%E5%BF%9C%E7%94%A8%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93%E8%80%85-%E4%BB%A4%E5%92%8C06%E5%B9%B4-%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86%E6%8A%80%E8%A1%93%E8%80%85%E8%A9%A6%E9%A8%93-%E3%81%8D%E3%81%9F%E3%81%BF%E3%82%8A%E3%82%85%E3%81%86%E3%81%98/dp/4297138093/ref=asc_df_4297138093/?tag=jpgo-22&linkCode=df0&hvadid=676036410708&hvpos=&hvnetw=g&hvrand=14273012692343293169&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9162935&hvtargid=pla-2247804171278&psc=1&mcid=d9a81f6f339236c696a55d365e0cb94b&th=1&psc=1&gad_source=1
+
+
 当初はまず参考書の説明部分だけをぱーっと一通り読んだ後に例題を解きました．
 人間の脳というのは不思議なものでじっくり頭に入れようとするよりもぱーっと一通り読む方が記憶に定着しやすい場合もあると勝手に思ってます．個人の見解です．
 
@@ -130,6 +135,10 @@ https://www.fe-siken.com/fekakomon.php
 
 
 #### 科目B
+
+https://www.amazon.co.jp/2024-%E5%BF%9C%E7%94%A8%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93%E8%80%85-%E5%8D%88%E5%BE%8C%E5%95%8F%E9%A1%8C%E3%81%AE%E9%87%8D%E7%82%B9%E5%AF%BE%E7%AD%96-%E5%B0%8F%E5%8F%A3%E9%81%94%E5%A4%AB%E3%80%81%E3%82%A2%E3%82%A4%E3%83%86%E3%83%83%E3%82%AFIT%E4%BA%BA%E6%9D%90%E6%95%99%E8%82%B2%E7%A0%94%E7%A9%B6%E9%83%A8/dp/4865753168/ref=asc_df_4865753168/?tag=jpgo-22&linkCode=df0&hvadid=676036410708&hvpos=&hvnetw=g&hvrand=14273012692343293169&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9162935&hvtargid=pla-2247804180678&psc=1&mcid=08e2036d324938e9827c5f1037ac2c91&th=1&psc=1&gad_source=1
+
+
 科目Bに関しては，まず参考書の例題を解きました．
 
 また，参考書は科目Bの問題数が少なく物足りないと感じたため，過去問道場の力も借りました．
