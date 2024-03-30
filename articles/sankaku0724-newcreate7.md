@@ -22,9 +22,9 @@ https://zenn.dev/joho0724/articles/sankaku0724-newcreate3
 
 ## PythonでDiscord Botを動かしておうむ返しできるようにしてみよう
 
-oumu.pyというPythonファイルを作成し、以下のように書き込みました。
+Echo.pyというPythonファイルを作成し、以下のように書き込みました。
 
-```py:oumu.py
+```py:Echo.py
 import discord  # Discordライブラリをインポート
 
 channel_id = xxxxxxx  # 送信先のチャンネルIDに置き換えてください
@@ -63,7 +63,6 @@ async def on_message(message):  # メッセージを受信したときのイベ�
             print(f"エラー: {e}")
 
 client.run(token)  # Botを起動
-
 ```
 
 以下に、プログラムの詳細な説明をします。
@@ -169,7 +168,7 @@ client.run(token)  # Botを起動
 このプログラムを実行して、作成したBotが起動している状態でチャンネルにメッセージを送信すると、メッセージの送信者と内容をBotが表示するようになりました。
 これによって、おうむ返しを実現させることができました。
 
-![](/images/sankaku7/oumu.png)
+![](/images/sankaku7/Echo.png)
 *みんな大好き[黒棺](https://www.shonenjump.com/j/rensai/list/bleach.html)*
 
 ## さいごに
