@@ -8,7 +8,7 @@ topics:
   - "discord"
   - "discordbot"
   - "discordpy"
-published: false
+published: true
 ---
 
 ## はじめに
