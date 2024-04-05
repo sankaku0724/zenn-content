@@ -236,7 +236,7 @@ LINE_message(linemsg)
 ```
 ::::
 
-`import json`でjsonモジュールをインポートし，LINE.pyと同じディレクトリに配置したexample.jsonからLINE_NOTIFY_TOKENを読み込みます。
+`import json`でjsonモジュールをインポートし，LINE.pyと同じディレクトリに配置したexample.jsonからLINE_NOTIFY_TOKENを読み込むようにしました。
 
 このプログラムを実行すると，正しく動作したことから，LINE NotifyのアクセストークンをJSONファイルから正確に取得できていることがわかりました．
 
