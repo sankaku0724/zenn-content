@@ -1,5 +1,5 @@
 ---
-title: "Docker DesktopでWebサーバーを起動する"
+title: "【初心者向け】Docker DesktopでWebサーバーを起動する"
 emoji: "🐳"
 type: "tech"
 topics:
@@ -191,7 +191,7 @@ docker image rm httpd:2.4
 
 これによって、httpd:2.4イメージを削除することができます。
 
-これでコンテナの構築作業の一連の流れは終了です！
+これでWebサーバーの起動と終了の一連の流れは終了です！
 
 ## さいごに
 ここまで記事を読んでくださり、ありがとうございました！
