@@ -1,5 +1,5 @@
 ---
-title: "Docker DesktopでWebサーバーを起動してみた"
+title: "Docker DesktopでWebサーバーを起動する"
 emoji: "🐳"
 type: "tech"
 topics:
@@ -80,7 +80,7 @@ docker ps -a
 
 ## 　3. Webサーバーを起動だ！
 
-**docker runを実行した時のディレクトリの内容が表示される⋯**
+**docker runを実行した時のカレントディレクトリの内容が表示される⋯**
 
 **ということは⋯！**
 
@@ -178,7 +178,7 @@ docker image ls
 
 これによって、**httpd:2.4**イメージ（httpdというイメージのバージョン2.4）がDockerに存在することが確認できました。
 
-![](/images/sankaku10/Imagerm.png)
+![](/images/sankaku10/imagerm.png)
 
 一般的にDockerイメージはコンテナを破棄したとしても、新しくコンテナを作る際に再ダウンロードする必要がないようにするために残ったままになってしまいます。
 今回の私の場合では、Dockerイメージが188MBの容量を持っていることが確認できました。
