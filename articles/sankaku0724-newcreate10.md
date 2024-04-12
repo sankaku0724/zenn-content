@@ -1,5 +1,5 @@
 ---
-title: "【初心者向け】Docker DesktopでWebサーバーを起動する"
+title: "【初学者向け】Docker DesktopでWebサーバーを起動する"
 emoji: "🐳"
 type: "tech"
 topics:
@@ -20,10 +20,12 @@ published: false
 
 今回は、私が初めてDockerに触れ、Docker DesktopでWebサーバーを起動した際の手順について紹介します。
 
-
 ### 動作環境
 
-Macbook Air M1上のDocker Desktop
+- Docker Desktop 4.21.1 (114176)
+- Docker Engine 24.0.2
+- Docker Compose v2.19.1
+- MacOS Sonoma 14.4.1
 
 ## 　Dockerって何？
 
@@ -32,7 +34,7 @@ Macbook Air M1上のDocker Desktop
 
 ## 　1. Docker Hubでイメージを探す
 
-まず、目的のコンテナの元となるイメージを探しました。
+まず、目的のコンテナの元となるイメージを探す必要があります。
 
 Dockerコンテナ内でApache HTTPサーバーを実行するための「**apache**」を検索ボックスに入力し、「**httpd**」を選択して**Pull**しましょう。
 
@@ -53,6 +55,10 @@ Dockerは、以下のような書式でコマンドを扱います。
 ```
 Docker コマンド 操作 オプション
 ```
+
+また、コマンド一覧は以下の記事に記載されています。
+
+https://docs.docker.jp/engine/reference/commandline/index.html
 
 先ほどの詳細ページに記載されていた実行コマンドである`docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4`を実行してみます。
 
@@ -80,11 +86,13 @@ docker ps -a
 
 ## 　3. Webサーバーを起動だ！
 
-**docker runを実行した時のカレントディレクトリの内容が表示される⋯**
+では、作成したコンテナ内でWebサーバーを起動させていきましょう。
+
+先ほどは、docker runを実行した時のカレントディレクトリの内容が表示されましたが、Webサーバーがデフォルトで提供する動作として、index.htmlが存在する場合、他のファイルやディレクトリのリストが表示されるのではなく、index.htmlの内容が表示されるようになるというものがあります。
 
 **ということは⋯！**
 
-そうです！例えば、**ディレクトリに「index.html」ファイルを置くことでそれを表示させることができます！**
+そうです！**ディレクトリに「index.html」ファイルを置くことでそれを表示させることができます！**
 
 では、ディレクトリ上にindex.htmlを作成してみましょう。
 
