@@ -1,7 +1,7 @@
 ---
 title: "メモ"
 emoji: "😝"
-type: "tech"
+type: "idea"
 topics:
   - "zenn"
   - "初心者"
