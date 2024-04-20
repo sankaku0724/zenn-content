@@ -19,7 +19,7 @@ published: true
 
 ## Warpってなんやねん
 
-[Warp公式](https://www.warp.dev/a)によると、Warpは**Rustによって構築されているターミナル**とのことです。
+[Warp公式](https://www.warp.dev/)によると、Warpは**Rustによって構築されているターミナル**とのことです。
 
 Rustによって構築されているため、コマンドの入力、編集、完了が一般的なターミナルよりも速くなっているというのが特徴のようです。
 
@@ -34,7 +34,7 @@ Rustによって構築されているため、コマンドの入力、編集、�
 
 Warpは以下の公式サイトからインストールすることができます。
 
-https://www.warp.dev/a
+https://www.warp.dev/
 
 Warpは**2024年4月現在、MacかLinuxのどちらかに対応しており、Windows版はまだリリースされていない**ようです。
 
