@@ -53,7 +53,7 @@ docker create --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdoc
 docker start my-apache-app
 ```
 
-この三つのコマンドを一つづつ見ていきましょう．
+この三つのコマンドをそれぞれ見ていきましょう．
 
 ### docker pull
 
@@ -154,7 +154,7 @@ docker stop コンテナ名orコンテナID
 
 稼働中のコンテナは何かしらのコマンドを実行しっぱなしの状態になっています．つまり，**普通であれば`docker run`した後には，他のコマンドを打てなくなる**はずです．
 
-しかし，`docker run`を実行した後に，他のコマンド（`docker stop`など）を打ち込んで実行することが可能なのはなぜでしょう．
+しかし，`docker run`を実行した後に，他のコマンド（`docker stop`など）を打ち込んで実行することが可能なのはなぜでしょうか？
 
 それは**コンテナがバックグラウンドで動いているから**です．
 
@@ -174,3 +174,6 @@ docker run --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ 
 
 
 ## 3.コンテナのメンテナンス
+
+シェルでコンテナ操作をしたい場合に
+
