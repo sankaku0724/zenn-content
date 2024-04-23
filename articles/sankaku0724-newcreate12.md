@@ -39,7 +39,7 @@ https://docs.docker.com/
 ## 1.コンテナの起動から破棄までの流れ
 
 まず，コンテナが起動するまでの流れを追っていきたいと思います．
-私は以前，[Docker上でWebサーバーを建てた際](https://zenn.dev/joho0724/articles/sankaku0724-newcreate10)に以下のようにrunコマンドを使用しました．
+私は以前，[Docker上でWebサーバーを起動した際](https://zenn.dev/joho0724/articles/sankaku0724-newcreate10)に以下のようにrunコマンドを使用しました．
 
 ```
 docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
@@ -129,5 +129,48 @@ httpdコンテナの起動では、`-v "$PWD":/usr/local/apache2/htdocs/`とい�
 `docker create`で作成したコンテナはまだ何も動作していません．
 
 そこで`docker start`コマンドを使用することでコンテナを動かすことができます．
+`docker start`コマンドは，
 
-単一で動かすことってないよね？run使おうぜ
+```
+docker start コンテナ名orコンテナID
+```
+
+といった書式で使用できます．
+
+ここまで，「**--name**」，「**-p**」，「**-v**」の三つのオプションについて説明しましたが，単一で動かすことはほとんどないと思われます．複合した機能を持つ`docker run`コマンドについての理解を深めておくと良さそうですね．
+
+`docker start`コマンドで開始されたコンテナは`docker stop`コマンドを使用することで停止することができます．
+`docker stop`コマンドは，
+
+```
+docker stop コンテナ名orコンテナID
+```
+
+といった書式で使用できます．
+
+これで，コンテナの起動から破棄までの流れの確認は以上です．
+
+## 2.コンテナのデタッチとアタッチ
+
+稼働中のコンテナは何かしらのコマンドを実行しっぱなしの状態になっています．つまり，**普通であれば`docker run`した後には，他のコマンドを打てなくなる**はずです．
+
+しかし，`docker run`を実行した後に，`docker stop`を打ち込んで実行することが可能なのはなぜでしょう．
+
+それは**コンテナがバックグラウンドで動いているから**です．
+
+コンテナをバックグラウンドで動かすための指定として「-dit」オプションというものがあります．
+
+では，「-dit」オプションをつけずに実行するとどうなるのか試してみたいと思います．先ほどのrunコマンドから「-dit」オプションを外して実行します，
+
+```
+docker run --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
+```
+
+
+
+![](/images/sankaku10/run1.png)
+
+
+
+
+## 3.コンテナのメンテナンス
