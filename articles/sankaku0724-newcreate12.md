@@ -13,7 +13,7 @@ published: false
 
 ## はじめに
 
-この記事は、この記事は，以前私が書いた「[【初学者向け】DockerでWebサーバーを起動する](https://zenn.dev/joho0724/articles/sankaku0724-newcreate10)」という記事の内容を踏まえて、Dockerの基本操作についてまとめたものです。
+この記事は、以前私が書いた「[【初学者向け】DockerでWebサーバーを起動する](https://zenn.dev/joho0724/articles/sankaku0724-newcreate10)」という記事の内容を踏まえて、Dockerの基本操作についてまとめたものです。
 
 :::message
 もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
@@ -122,7 +122,7 @@ Dockerでは「-p」オプションを指定しない限り、Dockerホストと
 
 httpdコンテナの起動では、`-v "$PWD":/usr/local/apache2/htdocs/`といったように「-v」オプションを指定しており，$PWDの値をコンテナの/usr/local/apache2/htdocs/に割り当てています．
 
-ここで，`$PWD`はdockerコマンドを入力したホスト側のカレントディレクトリを示す環境変数であり，`/usr/local/apache2/htdocs`はコンテナ側のマウント先のディレクトリです。ここでのマウントとは、あるディレクトリに対して別のディレクトリを被せて、そのディレクトリの内容が見えるようにする設定のことです。
+ここで，`$PWD`はdockerコマンドを入力したホスト側のカレントディレクトリを示す環境変数であり，`/usr/local/apache2/htdocs`はコンテナ側のマウント先のディレクトリです。
 
 ### docker start
 
@@ -166,7 +166,7 @@ docker stop コンテナ名orコンテナID
 docker run --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
 ```
 
-
+実行画面はこのようになりました．
 
 ![](/images/sankaku10/run1.png)
 
@@ -176,4 +176,5 @@ docker run --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ 
 ## 3.コンテナのメンテナンス
 
 シェルでコンテナ操作をしたい場合に
+
 
