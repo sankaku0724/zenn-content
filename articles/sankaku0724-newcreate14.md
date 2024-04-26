@@ -1,9 +1,9 @@
 ---
-title: "メモ"
-emoji: "😝"
+title: "さよなら忘却バッテリー"
+emoji: "🔋"
 type: "idea"
 topics:
-  - "zenn"
+  - "mac"
   - "初心者"
   - "ポエム"
   - "初心者向け"
