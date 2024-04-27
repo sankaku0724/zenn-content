@@ -151,6 +151,7 @@ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:1.22 go run he
 ![](/images/sankaku14/5.png)
 
 ![](/images/sankaku14/6.png)
+
 ［5］ コンテナの状態を確認しておく
 
 最後に、コンテナの状態を確認しておきましょう。docker ps-aと入力しても、何も表示されないことを確認してください。これは、docker runするときに、「-Im」オプションを付けているので、コマンドの実行が終わったとき（go build-vが終わったとき）に、コンテナが破棄されるためです。
