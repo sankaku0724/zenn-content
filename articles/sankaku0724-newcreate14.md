@@ -143,7 +143,11 @@ Hello World
 
 ![](/images/sankaku14/4.png)
 
+https://stackoverflow.com/questions/28755916/go-how-does-go-run-file-go-work
 
+https://pkg.go.dev/cmd/go#hdr-Compile_packages_and_dependencies
+
+https://pkg.go.dev/cmd/go#hdr-Compile_and_run_Go_program
 
 ```
 docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:1.22 go run hello.go
