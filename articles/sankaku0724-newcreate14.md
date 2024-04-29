@@ -1,6 +1,6 @@
 ---
 title: "DockerでGo言語を導入しようとしたら詰まった話"
-emoji: "💦"
+emoji: "🤮"
 type: "tech"
 topics:
   - "dockerdesktop"
@@ -13,7 +13,7 @@ published: false
 
 ## はじめに
 
-今回は、Dockerの初心者の私が，軽い気持ちでGo言語を導入しようとして大苦戦した際の解決方法になります．
+今回は、Dockerの初心者の私が軽い気持ちでGo言語を導入しようとして大苦戦した際の解決方法になります．
 
 :::message
 この記事は、Docker&Go言語初心者である私の解釈に基づいてまとめたものです。
@@ -27,11 +27,15 @@ published: false
 - Docker Compose v2.19.1
 - MacOS Sonoma 14.4.1
 
-## 経緯
+## 経緯（というほどのものでもないですが）
 
-ここまで使ってきたhttpdコンテナはWebサーバー機能を提供するものであり、ずっと動かしっぱなしで利用することを前提としたものです。こうしたサーバー用途の使い方は、Dockerの代表的な活用法です。しかしそれ以外にも、Dockerの代表的な使い方があります。それは、1回限り動かすコンテナの使い方です。どういうことかというと、コンパイラや画像変換ライブラリなどの便利ツールが入っていて、そのツールを使ってDockerホストのファイルを処理したいというケースです。
+Dockerの練習がてら，何か環境を試してみたいなぁ⋯
+せや！Go言語って有名だけど使ったことないし試してみるか！
 
-### Go言語をコンパイルしてみる
+~~これが地獄の始まりになるなんて⋯~~
+
+
+## Go言語をコンパイルしてみる
 試しにGo言語をコンパイルしてみましょう．
 Dockerコンテナを使えば、プログラミング言語の環境を手軽に試せます。コンテナを破棄してしまえば、元の状態にすぐに戻せますしね。
 Docker Hubには、Go言語のコンテナがあります。これを使って、Go言語のプログラムをコンパイルしてみましょう。
@@ -75,7 +79,7 @@ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:1.22 go build 
 
 「-w」オプションは、コンテナ内のプログラムを実行する時の作業ディレクトリを指定します。/usr/src/myappは、vオプションでマウントしたディレクトリであり，これはDockerホストのカレントディレクトリにマウントされているため、コンテナ内ではこのディレクトリに対してGo言語のビルドが実行されます。
 
-![](/images/sankaku12/19.png)
+![](/images/sankaku14/0.png)
 
 
 ところが，コンテナを起動することができませんでした．エラーの内容を見ると，**go.modファイルが存在しない**と出ています．
@@ -146,7 +150,7 @@ Hello World
 
 ![](/images/sankaku14/3.png)
 
-![](/images/sankaku14/4.png)
+
 
 https://stackoverflow.com/questions/28755916/go-how-does-go-run-file-go-work
 
@@ -157,9 +161,8 @@ https://pkg.go.dev/cmd/go#hdr-Compile_and_run_Go_program
 ```
 docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:1.22 go run hello.go
 ```
-![](/images/sankaku14/5.png)
 
-![](/images/sankaku14/6.png)
+![](/images/sankaku14/4.png)
 
 ［5］ コンテナの状態を確認しておく
 
@@ -188,3 +191,13 @@ $ docker container prune
 
 イメージについても同様です。docker image pruneと入力すれば、どのコンテナも使っていないすべてのイメージを削除できます。
 $ docker image prune
+
+## さいごに
+
+ここまで記事を読んでくださり、ありがとうございました！
+
+今回は、私がDockerを利用していく中で重要だと感じたDockerコンテナの基本操作方法についてまとめてみました。
+
+まだまだ経験が浅く使い慣れていないですが、Dockerをより理解するために突き進んでいきたいと思います！
+
+**皆さんも素敵なハッピーDocker&Goライフを！！！🌸**
