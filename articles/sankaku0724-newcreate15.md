@@ -1,5 +1,5 @@
 ---
-title: "Dockerコンテナやイメージの破棄を完璧に行うための秘訣"
+title: "Dockerコンテナ&イメージ削除方法"
 emoji: "😸"
 type: "idea"
 topics:
@@ -13,7 +13,7 @@ published: false
 
 ## はじめに
 
-この記事はDockerコンテナやイメージの削除方法についてまとめたものです。
+この記事は、Dockerの初心者の私がコンテナとイメージの削除方法についてまとめたものです。
 
 :::message
 もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
@@ -73,7 +73,7 @@ docker container prune
 
 ### 全てのイメージを削除
 
-イメージについても同様です。`docker image prune`と入力すれば、どのコンテナも使っていない全てのイメージを削除できます。
+イメージについても同様です。`docker image prune`と入力すれば、**どのコンテナも使っていない全てのイメージを削除**できます。
 
 ```
 docker image prune
@@ -91,7 +91,7 @@ docker image prune -a
 
 ### おまけ
 
-Docker Desktopならダッシュボード上で簡単にコンテナやイメージの削除ができます。
+Docker Desktopを使っている場合は、ダッシュボード上で簡単にコンテナやイメージの削除ができます。
 
 ![](/images/sankaku15/2.png)
 
