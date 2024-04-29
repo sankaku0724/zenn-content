@@ -1,7 +1,7 @@
 ---
 title: "Dockerコンテナ&イメージ削除方法"
 emoji: "😸"
-type: "idea"
+type: "tech"
 topics:
   - "dockerdesktop"
   - "cloud"
