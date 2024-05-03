@@ -1,5 +1,5 @@
 ---
-title: "DockerでGo言語を導入しようとしたら詰まった話"
+title: "DockerでGo言語を導入してみた"
 emoji: "🫨"
 type: "tech"
 topics:
@@ -13,7 +13,7 @@ published: false
 
 ## はじめに
 
-今回は、Dockerの初心者の私が軽い気持ちでGo言語を導入しようとした際の方法になります。
+今回は、Dockerを用いてGo言語を導入する方法について紹介します。
 
 :::message
 この記事は、Docker&Go言語初心者である私の解釈に基づいてまとめたものです。
@@ -176,7 +176,7 @@ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:1.22 go run he
 
 ## 結論
 
-DockerでGo言語を扱うには以下のように実行しましょう。
+DockerでGo言語を扱う際には、以下のように実行しましょう。
 
 ```
 docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang go run [実行したいgoソースコード名]
