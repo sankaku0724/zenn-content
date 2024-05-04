@@ -119,7 +119,7 @@ docker create オプション イメージ名orイメージID 実行したいコ
 
 Dockerでは「-p」オプションを指定しない限り、DockerホストとDockerコンテナとの通信はつながりません。**Dockerホストを通じてDockerコンテナ内で動いているプログラムと通信するには、「-p」オプションの設定が必要**になります。
 
-ちなみに**マッピングの状態は、`docker port`コマンドで確認**できます。
+ちなみに**マッピングの状態は、[`docker port`コマンド](https://docs.docker.jp/engine/reference/commandline/port.html)で確認**できます。
 
 #### 「-v」オプション
 
@@ -187,7 +187,7 @@ docker run --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ 
 
 ここで、`Ctrl+C`を押すとコンテナが停止し、キー入力を受け付けられるようになります。
 
-**`docker ps`コマンドに「`-a`」オプションを指定すると、稼働中ではないものも含むすべてのコンテナ一覧を確認することができる**ので、それを用いて確認するとSTATUSがExitedになっていることから、コンテナが停止していることも確認できます。
+**`docker ps`コマンドに「`-a`」オプションを指定すると、稼働中ではないものも含むすべてのコンテナ一覧を確認することができます。**それを用いて確認するとSTATUSがExitedになっていることから、コンテナが停止していることが確認できました。
 
 ![](/images/sankaku12/7.png)
 
