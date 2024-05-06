@@ -6,7 +6,7 @@ topics:
   - "dockerdesktop"
   - "cloud"
   - "docker"
-  - "container"
+  - "プログラミング"
   - "go"
 published: false
 ---
@@ -60,7 +60,7 @@ Go言語のイメージは、「golang」という名前です。下記のサイ
 
 https://hub.docker.com/_/golang
 
-記載されている使い方の通りに次のコマンドを入力して実行してみます。
+記載されている使い方の通り（2024年5月時点）に次のコマンドを入力して実行してみます。
 
 ```
 docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:1.22 go build -v
@@ -158,7 +158,7 @@ Go言語のコンパイラで、Goのソースコードをバイナリ実行フ�
 
 先ほどの手順でGoのソースコードを実行できました。
 
-しかし、せっかくコンテナ内で環境を作るといたことをしているのに手元に`myapp`や`go.mod`ファイルが残ってしまいます。
+しかし、せっかくコンテナ内で環境を構築するといったことをしているのに、これでは手元に`myapp`や`go.mod`ファイルが残ってしまいます。
 
 ファイルを作成せずにもっとより簡単にGoソースコードを実行する方法がないか調べていると、「[`go run`は指定されたメインGoパッケージをコンパイルして実行するが、`go build`は指定されたパッケージとその依存関係をコンパイルする](https://stackoverflow.com/questions/28755916/go-how-does-go-run-file-go-work)」という記述を見つけました。
 
@@ -181,9 +181,10 @@ DockerでGo言語を扱う際には、以下のように実行しましょう。
 ```
 docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang go run [実行したいgoソースコード名]
 ```
-このコマンドによって、Go言語のプログラムを最新版のgolang環境で実行できます。
 
-「--rm」オプションをつけていることによってコンテナは破棄されますが、まだイメージは残っているので、もう使用しないのであれば[イメージを削除する](https://zenn.dev/joho0724/articles/sankaku0724-newcreate15)ことも忘れないようにしましょう。
+このコマンドによって、Go言語のプログラムを[最新版](https://zenn.dev/joho0724/articles/sankaku0724-newcreate12#%E6%9C%80%E6%96%B0%E7%89%88%E3%82%92%E6%84%8F%E5%91%B3%E3%81%99%E3%82%8B%E3%80%8Clatest%E3%80%8D)のgolang環境で実行できます。
+
+「--rm」オプションをつけていることによって、実行後にコンテナは破棄されます。ですが、まだイメージは残っているので、もう使用しないのであれば[イメージを削除する](https://zenn.dev/joho0724/articles/sankaku0724-newcreate15)ことも忘れないようにしましょう。
 
 ## さいごに
 
