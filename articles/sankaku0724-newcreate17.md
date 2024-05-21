@@ -1,13 +1,13 @@
 ---
-title: "メモ"
-emoji: "😝"
-type: "idea"
+title: "【初学者向け】Dockerで"
+emoji: "🫨"
+type: "tech"
 topics:
-  - "zenn"
-  - "初心者"
-  - "ポエム"
-  - "初心者向け"
-  - "アウトプット"
+  - "dockerdesktop"
+  - "cloud"
+  - "docker"
+  - "プログラミング"
+  - "go"
 published: false
 ---
 
