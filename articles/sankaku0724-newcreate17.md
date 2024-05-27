@@ -1,13 +1,13 @@
 ---
 title: "【初学者向け】Dockerバインドマウントの基礎と実践"
-emoji: "🫨"
+emoji: "⛓️"
 type: "tech"
 topics:
   - "dockerdesktop"
   - "cloud"
   - "docker"
   - "container"
-  - "初心者"
+  - "web"
 published: false
 ---
 
@@ -52,7 +52,6 @@ nano index.html
 docker cp /tmp/index.html web01:/usr/local/apache2/htdocs/
 
 
-https://hub.docker.com/_/mysql
 
 ## さいごに
 

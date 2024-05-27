@@ -1,5 +1,5 @@
 ---
-title: "【初学者向け】Dockerバインドマウントの基礎と実践"
+title: "【初学者向け】Dockerボリュームマウントの基礎と実践"
 emoji: "🫨"
 type: "tech"
 topics:
@@ -36,20 +36,6 @@ https://docs.docker.jp/engine/reference/commandline/index.html
 
 https://docs.docker.com/
 
-
-http://localhost:8080/
-
-nano index.html
-
-'''html
-<html>
-<body>
-<div>It's web01!</div>
-</body>
-<html>
-'''
-
-docker cp /tmp/index.html web01:/usr/local/apache2/htdocs/
 
 
 https://hub.docker.com/_/mysql
