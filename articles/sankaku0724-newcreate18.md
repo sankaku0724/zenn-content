@@ -1,6 +1,6 @@
 ---
 title: "【初学者向け】Dockerボリュームマウントの基礎と実践"
-emoji: "🗂️"
+emoji: "🐬"
 type: "tech"
 topics:
   - "dockerdesktop"
@@ -13,10 +13,11 @@ published: false
 
 ## はじめに
 
-今回は、Dockerのファイル操作をする方法について紹介します。
+この記事では、Dockerのボリュームマウントについて説明します。
 
 :::message
-もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
+Dockerのバインドマウントについては，私が以前投稿した[【初学者向け】Dockerバインドマウントの基礎と実践](https://docs.docker.com/)という記事を見ていただけると幸いです．
+また，もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
 :::
 
 ### 私の動作環境
@@ -36,7 +37,13 @@ https://docs.docker.jp/engine/reference/commandline/index.html
 
 https://docs.docker.com/
 
+## ボリュームマウントって何？
 
+## ボリュームマウントを行う
+
+https://www.mysql.com/
+
+https://www.mysql.com/jp/
 
 https://hub.docker.com/_/mysql
 
