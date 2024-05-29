@@ -40,11 +40,11 @@ https://docs.docker.com/
 
 [**Dockerのバインドマウント**](https://docs.docker.jp/storage/bind-mounts.html)は、コンテナとホストシステムのファイルシステムを共有するための機能です。これにより、ホスト上の特定のディレクトリやファイルをコンテナ内にマウントすることができます。
 
-バインドマウントを使用すると、ホストマシン上のディレクトリをコンテナ内のディレクトリにリンクさせることができます。このリンクにより、ホスト側で変更されたファイルはリアルタイムでコンテナ側にも反映され、逆もまた然りです。
+バインドマウントを使用すると、ホストマシン上のディレクトリをコンテナ内のディレクトリにリンクさせることができます。
 
 ## Dockerコンテナとファイルの独立性
 
-Dockerのバインドマウントを行う前に、Dockerコンテナとファイルの独立性について理解しておくことが大切です。
+バインドマウントを行う前に、Dockerコンテナとファイルの独立性について理解しておくことが大切です。
 Dockerコンテナは、それぞれが隔離された実行環境です。**コンテナを破棄した場合、その中にあるファイルは失われます**。いくつ起動しても、それらが互いに影響を受けることはありません。
 
 ### 2つのコンテナを作成してみる
@@ -88,12 +88,12 @@ docker run -dit --name web02 -p 8081:80 httpd:2.4
 
 先ほど2つのコンテナを作成しましたが、どちらもまだコンテンツファイルを置いていないので両方とも「It works!」と表示され区別が付きません。そこでindex.htmlファイルを置いて、片方を「It's web01!」、もう片方を「It's web02!」と表示できるようにしてみます。
 
-ここで、コンテナとローカルファイルシステム間でファイルやフォルダをコピーできる[**`docker cp`コマンド**](https://docs.docker.jp/engine/reference/commandline/cp.html)というものが存在します。これによって、index.htmlをDockerホストに作成し、それをコンテナにコピーすることで表示を変更できるようにしてみます。
+ここで、コンテナとローカルファイルシステム間でファイルやフォルダをコピーできる[**`docker cp`コマンド**](https://docs.docker.jp/engine/reference/commandline/cp.html)というものが存在します。これを用いて、index.htmlをDockerホストに作成し、それをコンテナにコピーすることで表示を変更できるようにしてみます。
 
 #### 1.`/tmp`ディレクトリにindex.htmlを作成する
 
 まずはindex.htmlファイルを`/tmp`ディレクトリ内に作成します。
-次のようにして/`tmp`ディレクトリにカレントディレクトリを移動します。ここで、後で現在のカレントディレクトリに戻れるように、[**`pushd`コマンド**](https://linuxize.com/post/popd-and-pushd-commands-in-linux/)を使ってディレクトリを移動することにします。
+ここで`/tmp`ディレクトリにカレントディレクトリを移動する際に、後で現在のカレントディレクトリに戻れるように、[**`pushd`コマンド**](https://linuxize.com/post/popd-and-pushd-commands-in-linux/)を使ってディレクトリを移動することにします。
 
 :::message
 `pushd`コマンドは、現在のカレントディレクトリの状態を保存した上で、別の場所にカレントディレクトリを移動するコマンドです。`popd`と入力すると、保存したカレントディレクトリの位置まで戻ることができます（[後述の手順](https://zenn.dev/joho0724/articles/sankaku0724-newcreate17#6.%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%88%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E6%88%BB%E3%81%99)）。
@@ -107,13 +107,13 @@ pushd /tmp
 
 これによって、`/tmp`ディレクトリに移動できました。
 
-ここから、web01コンテナ用のindex.htmlファイルを用意します。nanoエディタなどでindex.htmlを作成します。
+ここから、web01コンテナ用のindex.htmlファイルをnanoエディタなどで作成して用意します。
 
 ```
 nano index.html
 ```
 
-index.htmlの中身は以下のようにします。
+また、index.htmlの中身は以下のようにし、「It's web01!」と表示するようにします。
 
 ```html:index.html
 <html>
@@ -122,8 +122,6 @@ index.htmlの中身は以下のようにします。
 </body>
 <html>
 ```
-
-これによって、「It's web01!」と表示するようにします。
 
 #### 2.ファイルをコンテナにコピーする
 
@@ -138,11 +136,9 @@ docker cp /tmp/index.html web01:/usr/local/apache2/htdocs/
 
 #### 3.ブラウザで確認してみる
 
-ブラウザで[http://Dockerホスト:8080/](http://localhost:8080/)に接続してみます。
+ブラウザで[http://Dockerホスト:8080/](http://localhost:8080/)に接続すると、コピーしたindex.htmlの内容である「It's web01!」の表示が確認できました。
 
 ![](/images/sankaku17/7.png)
-
-すると、コピーしたindex.htmlの内容である「It's web01!」の表示が確認できました。
 
 #### 4.コンテナの内部に入って確認してみる
 
@@ -181,11 +177,9 @@ docker cp /tmp/index02.html web02:/usr/local/apache2/htdocs/index.html
 ![](/images/sankaku17/10.png)
 *「Sucessfully」と出ていることから、コピーが成功していることが確認できる*  
 
-ブラウザで[http://Dockerホスト:8081/](http://localhost:8081/)に接続してみます。
+ブラウザで[http://Dockerホスト:8081/](http://localhost:8081/)に接続すると、コピーしたindex02.htmlの内容である「It's web02!」の表示が確認できました。
 
 ![](/images/sankaku17/11.png) 
-
-すると、コピーしたindex02.htmlの内容である「It's web02!」の表示が確認できました。
 
 #### 6.カレントディレクトリを戻す
 
@@ -224,7 +218,7 @@ popd
 
 ![](/images/sankaku17/17.png)  
 
-これによって、コンテナは完全に削除されたことが確認できました。
+確認すると、コンテナは完全に削除されていました。
 
 ![](/images/sankaku17/18.png)
 *web01が存在していない様子*  
@@ -285,15 +279,14 @@ Docker Desktopの設定を開き、「Settings」を選択します。
 ![](/images/sankaku17/28.png)
 
 そこからFile Sharingに移動し、「+」ボタンをクリックして新しいディレクトリを追加します。
-この手順により、Dockerがホストの`/Users/[私の名前]/web01data`ディレクトリにアクセスできるようになります。
 
 ![](/images/sankaku17/24.png)  
 
-この手順を完了することで、Dockerはホストシステムの`/Users/[私の名前]/web01data`ディレクトリにアクセスし、コンテナにマウントできるようになります。
+この手順を完了することで、Dockerは`/Users/[私の名前]/web01data`ディレクトリにアクセスし、コンテナにマウントできるようになります。
 
 #### 3.index.htmlを作成する
 
-web01内に以下のような内容のindex.htmlを配置します。
+web0data内に以下のような内容のindex.htmlを配置します。
 
 ```html:index.html
 <html>
