@@ -16,7 +16,7 @@ published: false
 この記事では、Dockerのボリュームマウントについて説明します。
 
 :::message
-Dockerのバインドマウントについては，私が以前投稿した[【初学者向け】Dockerバインドマウントの基礎と実践](https://docs.docker.com/)という記事を見ていただけると幸いです．
+Dockerのバインドマウントについては，私が以前投稿した[【初学者向け】Dockerバインドマウントの基礎と実践](https://zenn.dev/joho0724/articles/sankaku0724-newcreate17)という記事を見ていただけると幸いです．
 また，もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
 :::
 
