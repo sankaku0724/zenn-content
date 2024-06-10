@@ -67,7 +67,7 @@ docker volume create ボリューム名
 
 ここでは，「mysqlvolume」という名前で作成してみます．
 
-![](/images/sankaku18/1.png)  
+![](/images/sankaku18/1.png)
 
 `docker volume`コマンドを用いると，存在するボリュームを確認することができます．
 
@@ -108,48 +108,70 @@ docker run --name db01 -dit -v mysqlvolume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD
 
 #### 4. データベースを作成する
 
+操作ができるようになったら，以下のコマンドで「exampledb」という名前のデータベースを作成してみます．
 
-![](/images/sankaku18/6.png)  
+```
+CREATE DATABASE exampledb;
+```
 
-![](/images/sankaku18/7.png)  
+![](/images/sankaku18/6.png)
 
-![](/images/sankaku18/8.png)  
+#### 5. データベースのテーブルを作成する
 
-![](/images/sankaku18/9.png)  
+```
+use exampledb;
+```
 
-![](/images/sankaku18/10.png)  
 
-![](/images/sankaku18/11.png)  
 
-![](/images/sankaku18/12.png)  
+```
+CREATE TABLE exampletable (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(50), PRIMARY KEY(id));
+```
 
-![](/images/sankaku18/13.png)  
 
-![](/images/sankaku18/14.png)  
 
-![](/images/sankaku18/15.png)  
+![](/images/sankaku18/7.png)
 
-![](/images/sankaku18/16.png)  
+![](/images/sankaku18/8.png)
 
-![](/images/sankaku18/17.png)  
+![](/images/sankaku18/9.png)
 
-![](/images/sankaku18/18.png)  
+![](/images/sankaku18/10.png)
 
-![](/images/sankaku18/19.png)  
+![](/images/sankaku18/11.png)
 
-![](/images/sankaku18/20.png)  
+![](/images/sankaku18/12.png)
 
-![](/images/sankaku18/21.png)  
+![](/images/sankaku18/13.png)
 
-![](/images/sankaku18/22.png)  
+![](/images/sankaku18/14.png)
 
-![](/images/sankaku18/23.png)  
+![](/images/sankaku18/15.png)
 
-![](/images/sankaku18/24.png)  
+![](/images/sankaku18/16.png)
 
-![](/images/sankaku18/25.png)  
+![](/images/sankaku18/17.png)
 
-![](/images/sankaku18/26.png)  
+![](/images/sankaku18/18.png)
+
+![](/images/sankaku18/19.png)
+
+## データのバックアップを行う
+
+
+![](/images/sankaku18/20.png)
+
+![](/images/sankaku18/21.png)
+
+![](/images/sankaku18/22.png)
+
+![](/images/sankaku18/23.png)
+
+![](/images/sankaku18/24.png)
+
+![](/images/sankaku18/25.png)
+
+![](/images/sankaku18/26.png)
 
 
 ## バインドマウントとボリュームマウントの使い分け
