@@ -227,7 +227,7 @@ docker run --name db01 -dit -v mysqlvolume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD
 
 ## データのバックアップを行う
 
-コンテナを扱う場合、データのバックアップについて検討する必要があります。
+コンテナを扱う場合、データのバックアップについて考慮する必要があります。
 バインドマウントの場合は、Dockerホスト上のファイルに直接アクセスできるため、バックアップを簡単に行うことができます。
 
 では、ボリュームマウントの場合はどうすればよいのでしょうか。
@@ -235,7 +235,7 @@ docker run --name db01 -dit -v mysqlvolume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD
 
 #### 1. ボリュームを確認する
 
-ボリュームの情報は[`docker volume inspect`](https://docs.docker.jp/engine/reference/commandline/volume_inspect.html)で確認することができます。
+ボリュームの情報は[**`docker volume inspect`**](https://docs.docker.jp/engine/reference/commandline/volume_inspect.html)で確認することができます。
 
 ```
 docker volume inspect mysqlvolume
@@ -264,7 +264,7 @@ docker run --rm -v mysqlvolume:/src -v "$PWD":/dest busybox tar czvf /dest/backu
 
 ![](/images/sankaku18/22.png)
 
-バックアップを保存できたので、ボリュームを削除します。ボリュームを削除する際は、[docker volume rm](https://docs.docker.jp/engine/reference/commandline/volume_rm.html)を用います。
+バックアップを保存できたので、ボリュームを削除します。ボリュームを削除する際は、[**docker volume rm**](https://docs.docker.jp/engine/reference/commandline/volume_rm.html)を用います。
 
 ```
 docker volume rm mysqlvolume
@@ -278,7 +278,7 @@ docker volume rm mysqlvolume
 :::details コンテナをバックアップ対象にする
 先ほどは、ボリュームをバックアップ対象にしました。しかし、コンテナ数が増えてきた場合や複数の管理者がコンテナを管理する場合には、それぞれのコンテナがどのボリュームを使っているのかを洗い出してバックアップするのは手間がかかってしまいます。
 
-そのような場合には[`--volumes-from`](https://docs.docker.jp/v1.11/engine/userguide/containers/dockervolumes.html#id9)オプションを用いてコンテナをリストア対象にしてバックアップを行うという方法があります。
+そのような場合には[**`--volumes-from`**](https://docs.docker.jp/v1.11/engine/userguide/containers/dockervolumes.html#id9)オプションを用いてコンテナをリストア対象にしてバックアップを行うという方法があります。
 
 `--volumes-from`オプションを用いることで、コンテナを起動する際に別のコンテナのマウント情報を引き継ぎ、同じ設定でマウントすることができます。
 例えば、以下のようにコマンドを実行した場合、先ほどと同様に`backup.tar.gz`としてカレントディレクトリにバックアップを保存することができます。
