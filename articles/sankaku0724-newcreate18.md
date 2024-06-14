@@ -69,7 +69,7 @@ docker volume create ボリューム名
 
 ![](/images/sankaku18/1.png)
 
-`docker volume`コマンドを用いると，存在するボリュームを確認することができます．
+`docker volume ls`を用いると，存在するボリュームを確認することができます．
 
 ```
 docker volume ls
@@ -231,23 +231,102 @@ docker run --name db01 -dit -v mysqlvolume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD
 バインドマウントの場合は、Dockerホスト上のファイルに直接アクセスできるため，バックアップを簡単に行うことができます。
 
 では，ボリュームマウントの場合はどうすればよいのでしょうか？
-先ほどの手順では、MySQLコンテナのデータを`mysqlvolume`という名前のボリュームに保存しました。もし，このボリュームが失われれば、データベースのデータも失われてしまいます。つまり、ボリュームの内容さえ保存することができれば、バックアップを取ることができるということになります。
+先ほどの手順では、MySQLコンテナのデータを`mysqlvolume`という名前のボリュームに保存しました。もし，このボリュームが失われれば、データベースのデータも失われてしまいます。つまり、**ボリュームの内容さえ保存することができれば、バックアップを取ることができる**ということになります。
 
 #### 1. ボリュームを確認する
 
-[`docker volume inspect`](https://docs.docker.jp/engine/reference/commandline/volume_inspect.html)で
+ボリュームの情報は[`docker volume inspect`](https://docs.docker.jp/engine/reference/commandline/volume_inspect.html)で確認することができます．
+
+```
+docker volume inspect mysqlvolume
+```
 
 ![](/images/sankaku18/20.png)
+*ボリュームの詳細情報*
+
+Mountpoint(マウントされている場所)を見ると，「`/var/lib/docker/volumes/`」以下にあることが示されています．
+
+#### 2. ボリュームをバックアップする
+
+しかし、MountpointはDocker Engineのシステム領域であり、ここをバックアップしてリストア（バックアップからデータを元の状態に戻すこと）しても、元に戻るとは限りません。
+
+そこで，Dockerでボリュームをバックアップする際には、適当なコンテナにボリュームを割り当て、そのコンテナを使ってバックアップを取るという方法があります。例えば、Linuxシステムが入ったコンテナを別に1つ起動し、そのディレクトリにバックアップ対象のコンテナをマウントするという方法です。次に、tarコマンドなどを使ってバックアップを作成し，そのバックアップをDockerホストに取り出すことでバックアップは完了します。リストアする際には、逆の手順でデータを戻すことができます。
+
+今回は，軽量Linuxシステムのbusyboxが入ったコンテナをmysqlvolumeをマウントして起動します。そして，tarコマンドでバックアップするようにもします．以下のコマンドにより、mysqlvolumeボリュームの内容がbackup.tar.gzファイルとしてカレントディレクトリに保存されます。
+
+```
+docker run --rm -v mysqlvolume:/src -v "$PWD":/dest busybox tar czvf /dest/backup.tar.gz -C /src .
+```
 
 ![](/images/sankaku18/21.png)
 
+実行すると，カレントディレクトリにbackup.tar.gzとしてバックアップが作成できました．
+
 ![](/images/sankaku18/22.png)
+
+バックアップを保存できたので，ボリュームを削除します．ボリュームを削除する際は，[docker volume rm](https://docs.docker.jp/engine/reference/commandline/volume_rm.html)を用います．
+
+```
+docker volume rm mysqlvolume
+```
+
+`docker volume ls`で確認すると，ボリュームが削除されていることが確認できました．
 
 ![](/images/sankaku18/23.png)
 
+#### 3. ボリュームをリストアする
+
+では，保存したバックアップを利用して，ボリュームをリストアしてみます．まず，ボリュームを作成します．
+
+```
+docker volume create mysqlvolume
+```
+
+作成したら，以下のコマンドを実行することでホストの現在のディレクトリにある backup.tar.gz ファイルの内容が mysqlvolume ボリュームにリストアされます。
+
+```
+docker run --rm -v mysqlvolume:/dest -v "$PWD":/src busybox tar xzf /src/backup.tar.gz -C /dest
+```
+
 ![](/images/sankaku18/24.png)
 
+docker volume ls
+
+docker run --name db01 -dit -v mysqlvolume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mypassword mysql
+
+docker exec -it db01 /bin/bash bash-5.1# mysql -p
+
+mysql> use exampledb;
+
+mysql> SELECT * FROM exampletable;
+
+
+
+
+
 ![](/images/sankaku18/25.png)
+
+
+
+
+
+
+docker volume ls
+
+docker stop db01
+
+docker run --rm --volumes-from
+db01 -v "$PWD":/dest busybox tar czf /dest/backup.tar.gz -C /var/lib/mysql .
+
+docker start
+
+
+
+
+
+
+
+
 
 ![](/images/sankaku18/26.png)
 
@@ -270,7 +349,7 @@ docker run --name db01 -dit -v mysqlvolume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD
 **2. バックアップ**
 データのバックアップは、マウント先をtar.gzなどでアーカイブします。ボリュームマウントの場合は、対象をマウントするコンテナを作り、そのコンテナ内でtarコマンドなどを実行してバックアップをとって必要なデータを取り出します。
 
-ここまで記事を読んでくださり、ありがとうございました！今回は、私がDockerを利用していく中で重要だと感じたボリュームマウントについてまとめてみました。
+ここまで記事を読んでくださり、ありがとうございました！今回は、私がDockerを利用していく中で重要だと感じたボリュームマウントとそのバックアップ方法についてまとめてみました。
 
 今後も、Dockerを理解するために突き進んでいきたいと思います！
 
