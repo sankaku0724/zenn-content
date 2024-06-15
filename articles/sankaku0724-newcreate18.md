@@ -104,7 +104,7 @@ docker run --name db01 -dit -v mysqlvolume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD
 内部に入ったら、[`mysql`](https://dev.mysql.com/doc/refman/8.0/ja/mysql.html)コマンドを「-p」オプションをつけて実行します。ここで、-pオプションはパスワードの入力を求めるためのオプションです。パスワードが求められたら、コンテナを起動する際に`MYSQL_ROOT_PASSWORD`環境変数で設定したパスワードである「mypassword」を入力します。これにより、MySQLサーバーにrootユーザーとしてログインできます。rootユーザーはMySQLの最高権限を持つユーザーなので、データベースの作成や削除、テーブルの操作などができます。
 
 ![](/images/sankaku18/5.png)
-*「mysql」と表示され、MySQLの操作ができるように*  
+*「mysql>」と表示され、MySQLの操作ができるように*  
 
 #### 4. データベースを作成する
 

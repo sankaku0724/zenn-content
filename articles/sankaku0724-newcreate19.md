@@ -1,5 +1,5 @@
 ---
-title: "tldrコマンドを使いこなそう！簡単で便利なコマンドラインヘルプガイド"
+title: "tldrコマンドとかいう簡単で便利なコマンドラインヘルプガイド"
 emoji: "🫨"
 type: "tech"
 topics:
@@ -13,22 +13,21 @@ published: false
 
 ## はじめに
 
-今回は、Dockerのファイル操作をする方法について紹介します。
+今回は、tldrコマンドについて紹介します。
 
-:::message
-もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
-:::
+## tldrコマンドってなんや？
 
-### 私の動作環境
-
-- MacBook Air M1 2020
-- MacOS Sonoma 14.5
 
 https://github.com/tldr-pages/tldr
 
 https://tldr.sh/
 
 https://formulae.brew.sh/formula/tldr
+
+### 私の動作環境
+
+- MacBook Air M1 2020
+- MacOS Sonoma 14.5
 
 これは、Homebrew（macOSやLinux用のパッケージ管理システム）を使って、tldr（簡略化されたマニュアルページを提供するツール）をインストールするためのコマンドです。具体的には以下のような手順になります：
 
