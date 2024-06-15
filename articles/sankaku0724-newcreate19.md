@@ -1,6 +1,6 @@
 ---
-title: "tldrで始める簡単コマンドラインヘルプ"
-emoji: "🫨"
+title: "tldrで眺める簡単コマンドラインヘルプ"
+emoji: "👀"
 type: "tech"
 topics:
   - "tldr"
@@ -13,37 +13,37 @@ published: false
 
 ## はじめに
 
-今回は、tldrコマンドについて紹介します。
+皆さんは**tldrコマンド**をご存知ですか？
 
-## tldrコマンドってなんや？
-
-
-https://github.com/tldr-pages/tldr
-
-https://tldr.sh/
-
-https://formulae.brew.sh/formula/tldr
+[友人](https://zenn.dev/niyu)に「これ便利なコマンドなんで使ってみてください！too long don't readです！！」と言われ、「何が便利なんだ？」ということで、私も使ってみることにしました。
 
 ### 私の動作環境
 
 - MacBook Air M1 2020
 - MacOS Sonoma 14.5
 
-これは、Homebrew（macOSやLinux用のパッケージ管理システム）を使って、tldr（簡略化されたマニュアルページを提供するツール）をインストールするためのコマンドです。具体的には以下のような手順になります：
+## tldrコマンドってそもそもなんやねん
 
-Tap the repository:
+tldrは`Too Long; Didn't Read（訳:長すぎて読めなかった）`の略語であり，tldrコマンドは**manコマンドの内容よりも簡略化されたマニュアルページを提供することを目的として作られたコマンド**のようです．
 
-sh
-コードをコピーする
+詳細を知りたい方は，[公式サイト](https://tldr.sh/)や[公式のGithub](https://github.com/tldr-pages/tldr)を確認してください．
+
+## tldrコマンドをインストールする
+
+私はmacOS上で以下のコマンドを実行し，[Homebrew](https://formulae.brew.sh/formula/tldr)経由でtldrコマンドをインストールしました．
+
+```
 brew tap tldr-pages/tldr
-これは、Homebrewにtldrコマンドのリポジトリ（tldr-pages/tldr）を追加するコマンドです。これにより、Homebrewはこのリポジトリからパッケージをインストールできるようになります。
-
-Install the tldr command:
-
-sh
-コードをコピーする
 brew install tldr
-これは、実際にtldrコマンドをインストールするコマンドです。tldrは、よく使われるコマンドの簡略化されたマニュアルページを提供するツールで、公式のmanページよりも短くて読みやすい説明を提供します。
+```
+
+- `brew tap tldr-pages/tldr`
+Homebrewにtldrコマンドのリポジトリ（tldr-pages/tldr）を追加するコマンドです。これにより、Homebrewがこのリポジトリからパッケージをインストールできるようになります。
+
+- `brew install tldr`
+実際にtldrコマンドをインストールするコマンドです。
+
+## tldrコマンドを使ってみた
 
 tldrについて
 tldrは、よく使われるコマンドの簡単でわかりやすい説明を提供するツールです。manページは詳細で包括的ですが、その分長くて複雑になることがあります。一方、tldrは、よく使われるオプションや例を簡潔にまとめたものを提供することで、ユーザーが必要な情報を迅速に得られるようにします。
@@ -72,7 +72,7 @@ man コマンド
 
 sh
 コードをコピーする
-$ man ls
+
 tldr コマンド
 簡潔でわかりやすい: tldrは、コマンドの最もよく使われる機能やオプションを簡潔にまとめています。読みやすさと理解しやすさを重視しています。
 実用的な例: 各コマンドの具体的な使い方の例が提供されており、初心者や中級ユーザーにとって非常に役立ちます。
@@ -84,38 +84,20 @@ sh
 $ tldr ls
 出力例:
 
-markdown
-コードをコピーする
-  ls
 
-  List directory contents.
-
-  - List files and directories in the current directory:
-    ls
-
-  - List all files and directories, including hidden ones:
-    ls -a
-
-  - List all files and directories with a trailing `/` added to directories:
-    ls -p
-
-  - List all files and directories with their permissions, user and group, size, and modification date:
-    ls -l
-
-  - List files and directories sorted by size (descending):
-    ls -S
-
-  - List files and directories sorted by modification time (most recent first):
-    ls -t
 まとめ
 目的: manは詳細な技術ドキュメントを提供し、tldrは簡潔な概要と実用的な例を提供します。
 情報量: manはすべての詳細を含み、tldrは最も重要で一般的な情報に焦点を当てます。
 ユーザー層: manは上級ユーザーや開発者向け、tldrは初心者や中級ユーザー向けです。
 これにより、manとtldrは補完的なツールとなり、状況に応じて使い分けることができます。
 
+
+
 ## さいごに
 
-ここまで記事を読んでくださり、ありがとうございました！今回は、ZennのPV数をGoogle Analyticsで確認する方法について紹介しました。興味を持った方は、ぜひGoogle Analyticsを利用してZennの執筆のモチベーションを上げていきましょう！
+ここまで記事を読んでくださり、ありがとうございました！
 
-**皆さんも素敵なハッピーDockerライフを！！！🌸**
+今回は、tldrコマンドについて紹介しました。興味を持った方は、ぜひtldrコマンドを利用してコマンドラインヘルプを確認してみてください！
+
+**皆さんも素敵なハッピーtldrライフを！！！🌸**
 
