@@ -264,7 +264,7 @@ docker run --rm -v mysqlvolume:/src -v "$PWD":/dest busybox tar czvf /dest/backu
 
 ![](/images/sankaku18/22.png)
 
-バックアップを保存できたので、ボリュームを削除します。ボリュームを削除する際は、[**docker volume rm**](https://docs.docker.jp/engine/reference/commandline/volume_rm.html)を用います。
+バックアップを保存できたので、ボリュームを削除します。ボリュームを削除する際は、[**`docker volume rm`**](https://docs.docker.jp/engine/reference/commandline/volume_rm.html)を用います。
 
 ```
 docker volume rm mysqlvolume
