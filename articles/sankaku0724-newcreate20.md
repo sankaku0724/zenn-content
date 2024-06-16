@@ -1,5 +1,5 @@
 ---
-title: "【初学者向け】Dockerバインドマウントの基礎と実践"
+title: "【初学者向け】"
 emoji: "🫨"
 type: "tech"
 topics:
@@ -13,7 +13,7 @@ published: false
 
 ## はじめに
 
-今回は、Dockerのファイル操作をする方法について紹介します。
+今回は、Dockerの
 
 :::message
 もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
@@ -37,22 +37,6 @@ https://docs.docker.jp/engine/reference/commandline/index.html
 https://docs.docker.com/
 
 
-http://localhost:8080/
-
-nano index.html
-
-'''html
-<html>
-<body>
-<div>It's web01!</div>
-</body>
-<html>
-'''
-
-docker cp /tmp/index.html web01:/usr/local/apache2/htdocs/
-
-
-https://hub.docker.com/_/mysql
 
 ## さいごに
 
