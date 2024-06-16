@@ -15,9 +15,9 @@ published: false
 
 皆さんは**tldrコマンド**をご存知ですか？
 
-私はつい先日、[友人](https://zenn.dev/niyu)に教えてもらい、「何が便利なんだ？」ということで使ってみることにしました。
+私は[友人](https://zenn.dev/niyu)に教えてもらい、「何が便利なんだ？」ということで使ってみることにしました。
 
-### 私の動作環境
+#### 私の動作環境
 
 - MacBook Air M1 2020
 - MacOS Sonoma 14.5
@@ -25,6 +25,7 @@ published: false
 ## tldrコマンドってそもそもなんやねん
 
 **tldrは`Too Long; Didn't Read（訳:長すぎて読めなかった）`の略語**です。
+
 そして、**tldrコマンドはmanコマンドの内容よりも簡略化されたマニュアルページを提供することを目的として作られたコマンド**のようです。
 
 詳細を知りたい方は、[公式サイト](https://tldr.sh/)や[Github](https://github.com/tldr-pages/tldr)を確認してください。
