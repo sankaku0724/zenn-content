@@ -301,7 +301,7 @@ docker run --rm --volumes-from db01 -v "$PWD":/dest busybox tar czf /dest/backup
 docker volume create mysqlvolume
 ```
 
-作成したら、以下のコマンドを実行することでホストの現在のディレクトリにある backup.tar.gz ファイルの内容が mysqlvolume ボリュームにリストアされます。
+作成したら、以下のコマンドを実行することでホストの現在のディレクトリにある`backup.tar.gz`ファイルの内容が`mysqlvolume`ボリュームにリストアされます。
 
 ```
 docker run --rm -v mysqlvolume:/dest -v "$PWD":/src busybox tar xzf /src/backup.tar.gz -C /dest
