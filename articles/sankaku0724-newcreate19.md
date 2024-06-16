@@ -15,7 +15,7 @@ published: false
 
 皆さんは**tldrコマンド**をご存知ですか？
 
-[友人](https://zenn.dev/niyu)に「これ便利なコマンドなんで使ってみてください！too long don't readです！！」と言われ、「何が便利なんだ？」ということで、私も使ってみることにしました。
+私は[友人](https://zenn.dev/niyu)に「便利なコマンドなんで使ってみてください！too long don't readです！！」と言われ、「どゆことやねん，何が便利なんだ？」ということで使ってみることにしました。
 
 ### 私の動作環境
 
@@ -24,9 +24,9 @@ published: false
 
 ## tldrコマンドってそもそもなんやねん
 
-tldrは`Too Long; Didn't Read（訳:長すぎて読めなかった）`の略語であり，tldrコマンドは**manコマンドの内容よりも簡略化されたマニュアルページを提供することを目的として作られたコマンド**のようです．
+tldrは`Too Long; Didn't Read（訳:長すぎて読めなかった）`の略語です．また，その名の通り，tldrコマンドは**manコマンドの内容よりも簡略化されたマニュアルページを提供することを目的として作られたコマンド**です．
 
-詳細を知りたい方は，[公式サイト](https://tldr.sh/)や[公式のGithub](https://github.com/tldr-pages/tldr)を確認してください．
+詳細を知りたい方は，[公式サイト](https://tldr.sh/)や[Github](https://github.com/tldr-pages/tldr)を確認してください．
 
 ## tldrコマンドをインストールする
 
