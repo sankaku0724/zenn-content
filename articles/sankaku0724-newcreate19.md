@@ -45,7 +45,7 @@ Homebrewにtldrコマンドのリポジトリ（tldr-pages/tldr）を追加す�
 - `brew install tldr`
 実際にtldrコマンドをインストールするコマンドです。
 
-## tldrコマンドをmanコマンドと比較してみた
+## tldrコマンドを使ってみた
 
 実際にmanコマンドとtldrコマンドを比較して、tldrコマンドはどれくらい短くマニュアルページを表示するのか確認してみたいと思います。
 また、今回はlsコマンドのマニュアルページを確認します。
@@ -62,7 +62,7 @@ man ls > man_ls_manual.txt
 以下に、`man_ls_manual.txt`の内容を記載します。
 
 :::details man_ls_manual.txtの内容
-```txt:man_ls_manual.txt
+```txt
 LS(1)                       General Commands Manual                      LS(1)
 
 NNAAMMEE
@@ -582,6 +582,7 @@ BBUUGGSS
      the same timestamp when sorting with the --tt option.
 
 macOS 14.5                      August 31, 2020                     macOS 14.5
+
 ```
 :::
 
@@ -601,7 +602,7 @@ tldr ls > tldr_ls_manual.txt
 さぁ、どうだ！
 
 :::details tldr_ls_manual.txtの内容
-```txt:tldr_ls_manual.txt
+```txt
 
 ls
 
@@ -631,6 +632,7 @@ More information: <https://www.gnu.org/software/coreutils/ls>.
 
 - Only list directories:
     ls -d */
+
 
 ```
 :::
