@@ -1,5 +1,5 @@
 ---
-title: "【tldrコマンド】手軽な情報マニュアルダイエットのススメ"
+title: "【tldr】超お手軽なマニュアルダイエットのススメ"
 emoji: "👀"
 type: "tech"
 topics:
