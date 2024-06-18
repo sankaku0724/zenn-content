@@ -1,5 +1,5 @@
 ---
-title: "【tldr】超お手軽なマニュアルダイエットのススメ"
+title: "【tldr】超お手軽な情報ダイエットのススメ"
 emoji: "👀"
 type: "tech"
 topics:
