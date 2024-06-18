@@ -62,6 +62,7 @@ man ls > man_ls_manual.txt
 以下に、`man_ls_manual.txt`の中身をコピペしたものを記載します。
 
 :::details man_ls_manual.txtの中身
+```txt:man_ls_manual.txt
 LS(1)                       General Commands Manual                      LS(1)
 
 NNAAMMEE
@@ -581,6 +582,7 @@ BBUUGGSS
      the same timestamp when sorting with the --tt option.
 
 macOS 14.5                      August 31, 2020                     macOS 14.5
+```
 :::
 
 **私は読む気が失せました。Too Long; Didn't Readすぎます⋯**
@@ -599,6 +601,7 @@ tldr ls > tldr_ls_manual.txt
 さぁ、どうだ！
 
 :::details tldr_ls_manual.txtの中身
+```txt:tldr_ls_manual.txt
 
 ls
 
@@ -629,6 +632,7 @@ More information: <https://www.gnu.org/software/coreutils/ls>.
 - Only list directories:
     ls -d */
 
+```
 :::
 
 **なんだこの圧倒的な短さは！革命的すぎます！！！**
