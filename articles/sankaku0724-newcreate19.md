@@ -1,6 +1,6 @@
 ---
 title: "【tldr】超お手軽な情報ダイエットのススメ"
-emoji: "👀"
+emoji: "🚵‍♂️"
 type: "tech"
 topics:
   - "tldr"
