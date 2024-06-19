@@ -1,13 +1,13 @@
 ---
-title: "【初学者向け】"
-emoji: "🫨"
+title: "【初学者向け】Dockerネットワーク"
+emoji: "🌐"
 type: "tech"
 topics:
   - "dockerdesktop"
   - "cloud"
   - "docker"
   - "container"
-  - "初心者"
+  - "ネットワーク"
 published: false
 ---
 
