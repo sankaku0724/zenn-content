@@ -8,7 +8,7 @@ topics:
   - "homebrew"
   - "cli"
   - "ターミナル"
-published: false
+published: true
 ---
 
 ## はじめに
