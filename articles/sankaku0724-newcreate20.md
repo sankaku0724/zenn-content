@@ -6,7 +6,7 @@ topics:
   - "dockerdesktop"
   - "cloud"
   - "docker"
-  - "container"
+  - "network"
   - "ネットワーク"
 published: false
 ---
@@ -85,7 +85,7 @@ docker run -dit --name web02 -p 8081:80 httpd:2.4
 #### IPアドレスの確認
 
 コンテナが起動したらIPアドレスを確認します．
-この際に，Dockerコンテナの詳細情報を取得するためのコマンドである[**`docker container inspect`コマンド**](https://docs.docker.jp/engine/reference/commandline/inspect.html)を用い，--formatオプションをつけることでIPアドレスの部分だけを表示させるようにします．
+この際に，Dockerの詳細情報を取得するためのコマンドである[**`docker inspect`コマンド**](https://docs.docker.jp/engine/reference/commandline/inspect.html)を用いてコンテナの情報を抜き出し，さらに--formatオプションをつけることでIPアドレスの部分だけを表示させるようにします．
 
 ```
 docker container inspect --format="{{.NetworkSettings.IPAddress}}" web01
@@ -218,12 +218,45 @@ curl http://web01/
 exit
 ```
 
-### Dockerネットワークの新規作成
+### IPアドレスではなく，コンテナ名を指定できるようにする
 
-このように、それぞれのコンテナは、割り当てられたIPアドレスを介して、互いに通信できることがわかりました。同時に、IPアドレスの代わりにコンテナ名を使って通信することはできないこともわかりました。
-コンテナ名で通信相手を指定できないのは、とても不便です。なぜなら、コンテナに対して、どのようなIPアドレスが割り当てられるのかはコンテナを起動するまでわかりませんし、コンテナを破棄して作り直せば、IPアドレスが変わる恐れがあるためです。実験や開発目的ならともかく、実運用まで考えたときは、IPアドレスではなくてコンテナ名で通信相手を特定できるほうが望ましいといえます。
-そのための方法は、2つあります。1つは、Dockerネットワークを新規に作成する方法、もう1つは
--linkオプションを指定する方法です。後者の方法は非推奨なのでコラムで紹介することにし、以下では、前者の方法を説明していきます。
+今までの作業で，コンテナはそれぞれ割り当てられたIPアドレスを利用して、互いに通信できることがわかりました。同時に、IPアドレスの代わりとしてコンテナ名を使って通信することはできないということもわかりました。
+コンテナに対して、どのようなIPアドレスが割り当てられるのかはコンテナを起動するまでわからないため，コンテナ名で通信相手を指定できないのはとても不便です。また，コンテナを破棄して作り直した場合に、IPアドレスが変わる恐れがあるのも問題です。
+
+ここで，IPアドレスではなくコンテナ名で通信相手を特定できるようにする方法として，**Dockerネットワークを新規に作成する方法**が存在します．
+Dockerネットワークを新規に作成することにより，内部DNSサービスが提供され，同じネットワーク内のコンテナはコンテナ名で通信できるようになります。
+
+#### 1. Dockerネットワークの新規作成
+
+実際に確認してみます．
+Dockerネットワークは[**`docker network create`コマンド**](https://docs.docker.jp/engine/reference/commandline/network_create.html)を用いて作成することができます．以下のコマンドで「mynetwork」という名前のDockerネットワークを新規作成します．
+
+```
+docker network create mynetwork
+```
+
+![](/images/sankaku20/10.png)
+*Dockerネットワークを新規作成*
+
+`docker network ls`コマンドで確認すると，「mynetwork」ネットワークが作成されていることが確認できました．
+
+![](/images/sankaku20/11.png)
+*「mynetwork」が存在している*
+
+
+
+
+
+
+
+
+
+#### 2. Dockerネットワーク上でコンテナを作成
+
+
+
+
+
 
 
 ```
@@ -231,10 +264,6 @@ docker run -dit --name web01 -p 8080:80 --net mynetwork httpd:2.4
 ```
 
 
-
-![](/images/sankaku20/10.png)
-
-![](/images/sankaku20/11.png)
 
 ![](/images/sankaku20/12.png)
 
