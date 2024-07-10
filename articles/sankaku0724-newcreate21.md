@@ -48,7 +48,7 @@ Perplexity AIは**複数の情報源を集め、それをまとめたものを�
 ![](/images/sankaku21/3.png)
 *次の質問もしやすい*
 
-ちなみに私が米津玄師さんの曲で一番好きなのは「[恋と病熱](https://www.youtube.com/watch?v=GiPdefbPa0k)」です。皆さんも聴きましょう。
+ちなみに私が米津玄師さんの曲で一番好きなのは「[恋と病熱](https://www.youtube.com/watch?v=GiPdefbPa0k)」です。ぜひ、皆さんも聴きましょう。
 
 ## 実際に使ってみた2
 
@@ -108,4 +108,4 @@ Perplexity AIの回答を鵜呑みにせず、重要な情報については他�
 
 興味を持った方は、ぜひ一度Perplexity AIを使ってみてください！
 
-**皆さんも素敵なハッピーPerplexityライフを！！！🌸**
+**皆さんも素敵なハッピーPerplexity AIライフを！！！🌸**
