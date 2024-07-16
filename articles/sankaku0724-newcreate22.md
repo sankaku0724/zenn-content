@@ -1,6 +1,6 @@
 ---
 title: "【C言語】動的メモリ関数紹介"
-emoji: "🥸"
+emoji: "🪩"
 type: "tech"
 topics:
   - "c言語"
