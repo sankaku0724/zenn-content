@@ -1,6 +1,6 @@
 ---
-title: "【C言語】動的メモリ関数紹介"
-emoji: "🪩"
+title: "【C言語】めざせ動的メモリマスター"
+emoji: "👾"
 type: "tech"
 topics:
   - "c言語"
@@ -13,7 +13,7 @@ published: false
 
 ## はじめに
 
-今回は、C言語で動的メモリを扱う際によく用いる関数についてまとめてみました。
+今回は、私がC言語で動的メモリを扱う際によく用いる関数についてまとめてみました。
 
 :::message
 もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
@@ -24,16 +24,18 @@ published: false
 - MacOS Sonoma 14.5
 - Apple clang version 15.0.0 (clang-1500.3.9.4)
 
-## メモリ確保
+## 動的メモリ割り当て関数
 
 今回は、以下の関数の説明と簡単な使用例について紹介します。
 
-1. **malloc**
-2. **calloc**
-3. **alloca**
-4. **realloc**
+1. **malloc**（memory allocation）
+2. **calloc**（contiguous allocation）
+3. **alloca**(allocate on the stack)
+4. **realloc**（re-allocation）
 
-### 1. malloc（memory allocation）
+ここで、**`allocation`は割り当てという意味**です。
+
+### 1. malloc
 
 malloc関数は、**指定したサイズのメモリをヒープ領域に動的に確保する関数**です。
 使用する際には、ヘッダーファイル「stdlib.h」をインクルードする必要があります。
@@ -92,7 +94,7 @@ int main() {
 
 :::
 
-### 2. calloc（contiguous allocation）
+### 2. calloc
 
 calloc関数は、ほとんどmalloc関数と同じ機能を持っています。
 
@@ -145,7 +147,7 @@ int main() {
 
 :::
 
-### 3. alloca(allocate on the stack)
+### 3. alloca
 
 alloca関数は、**指定したサイズのメモリをスタック領域に動的に確保する関数**です。
 使用する際には、ヘッダーファイル「alloca.h」をインクルードする必要があります。
@@ -196,7 +198,7 @@ int main() {
 
 :::
 
-### 4. realloc（re-allocation）
+### 4. realloc
 
 realloc関数は、**既存のメモリブロックのサイズを変更する関数**です。
 使用する際には、ヘッダーファイル「stdlib.h」をインクルードする必要があります。
