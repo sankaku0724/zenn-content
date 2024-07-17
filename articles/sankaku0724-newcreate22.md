@@ -72,6 +72,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
+    
     // 最後に改行を追加
     printf("\n");
 
@@ -182,7 +183,8 @@ int main() {
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
-	// 最後に改行を追加
+    
+    // 最後に改行を追加
     printf("\n");
 
     // `alloca`で割り当てられたメモリは手動で解放する必要がない
@@ -250,6 +252,8 @@ int main() {
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
+
+    // 最後に改行を追加
     printf("\n");
 
     // メモリブロックの再割り当て
@@ -273,6 +277,8 @@ int main() {
     for (int i = 0; i < new_size; i++) {
         printf("%d ", arr[i]);
     }
+
+    // 最後に改行を追加
     printf("\n");
 
     // メモリの解放
