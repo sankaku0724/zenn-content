@@ -30,7 +30,7 @@ published: false
 
 1. **malloc**（memory allocation）
 2. **calloc**（contiguous allocation）
-3. **alloca**(allocate on the stack)
+3. **alloca**（allocate on the stack）
 4. **realloc**（re-allocation）
 
 ここで、**`allocation`は割り当てという意味**です。
@@ -228,7 +228,7 @@ realloc関数は、**既存のメモリブロックのサイズを変更する�
 
 #### 使用例
 
-以下にrealloc関数の使用例として、**malloc関数で確保した5個の整数を格納するのに十分なメモリ領域を、realloc関数で10に拡張するプログラム**を示します。
+以下にrealloc関数の使用例として、**malloc関数で確保した5個の整数を格納するのに十分なメモリ領域を、realloc関数で10個の整数を格納できるように拡張するプログラム**を示します。
 
 :::details realloc関数の使用例
 
