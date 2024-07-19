@@ -33,7 +33,7 @@ published: false
 
 [IPv6基礎検定](https://network-engineer.jp/ipv6basic)は、[一般社団法人日本ネットワーク技術者協会](https://network-engineer.jp/)が2023年3月から開始した**IPv6の基礎的な知識を問う試験**です．
 
-![](/images/sankakuIPv6/IPv6basic.png)
+![](/images/sankakuipv6/IPv6basic.png)
 
 一般社団法人日本ネットワーク技術者協会によると，以下のように説明されています．
 
