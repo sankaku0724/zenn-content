@@ -1,6 +1,6 @@
 ---
 title: "IPv6基礎検定を受けてみた話"
-emoji: "📖"
+emoji: "💮"
 type: "idea"
 topics:
   - "ipv6"
