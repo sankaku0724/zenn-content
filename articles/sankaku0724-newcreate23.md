@@ -1,13 +1,13 @@
 ---
-title: "【初学者向け】"
+title: "【初学者向け】docker-compose"
 emoji: "🫨"
 type: "tech"
 topics:
   - "dockerdesktop"
-  - "cloud"
+  - "mysql"
   - "docker"
-  - "container"
-  - "初心者"
+  - "dockercompose"
+  - "wordpress"
 published: false
 ---
 
