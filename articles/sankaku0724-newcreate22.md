@@ -8,7 +8,7 @@ topics:
   - "メモリ"
   - "プログラミング"
   - "初心者"
-published: false
+published: true
 ---
 
 ## はじめに
