@@ -1,6 +1,6 @@
 ---
-title: "【初学者向け】Docker Composeの基礎と実践"
-emoji: "🫨"
+title: "【初学者向け】Docker Composeの基礎"
+emoji: "🐦‍🔥"
 type: "tech"
 topics:
   - "dockerdesktop"
@@ -13,7 +13,7 @@ published: false
 
 ## はじめに
 
-今回は、Dockerの
+今回は、Docker Composeについて説明します。
 
 :::message
 もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
@@ -38,13 +38,26 @@ https://docs.docker.com/
 
 ## Docker Composeとは？
 
+[**Docker Compose**](https://docs.docker.jp/compose/index.html)は、複数のDockerコンテナを効率的に管理・実行するためのツールです。
 
+Docker Composeを使用すると、**複数のコンテナを1つのYAMLファイルで定義し、単一のコマンドで一括して起動・停止できます.**
+これにより，**複数コンテナの一括管理ができます．**
+また，コンテナの設定やネットワーク、ボリュームなどをYAMLファイルで宣言的に記述できるため、複雑な環境でも設定を簡潔に管理でき，サービスの複製や拡張も容易になります.
 
+ちなみに，**Docker Desktopをインストールすると、Docker Composeも自動的にインストールされます。**
+私の環境で以下のコマンドを実行し，バージョン確認をしてみます．
+
+```
+docker compose version
+```
+
+![](/images/sankaku23/1.png)
+*最初から入っている*
+
+Docker Desktopって便利ですね〜！
 
 ## Docker Composeを使ってみる
 
-
-![](/images/sankaku23/1.png)
 
 ![](/images/sankaku23/2.png)
 
@@ -57,35 +70,61 @@ https://docs.docker.com/
 ![](/images/sankaku23/6.png)
 
 ![](/images/sankaku23/7.png)
+
 ![](/images/sankaku23/8.png)
+
 ![](/images/sankaku23/9.png)
+
 ![](/images/sankaku23/10.png)
+
 ![](/images/sankaku23/11.png)
+
 ![](/images/sankaku23/12.png)
+
 ![](/images/sankaku23/13.png)
+
 ![](/images/sankaku23/14.png)
+
 ![](/images/sankaku23/15.png)
+
 ![](/images/sankaku23/16.png)
+
 ![](/images/sankaku23/17.png)
+
 ![](/images/sankaku23/18.png)
+
 ![](/images/sankaku23/19.png)
+
 ![](/images/sankaku23/20.png)
+
 ![](/images/sankaku23/21.png)
+
 ![](/images/sankaku23/22.png)
+
 ![](/images/sankaku23/23.png)
+
 ![](/images/sankaku23/24.png)
+
 ![](/images/sankaku23/25.png)
+
 ![](/images/sankaku23/26.png)
+
 ![](/images/sankaku23/27.png)
+
 ![](/images/sankaku23/28.png)
+
 ![](/images/sankaku23/29.png)
+
 ![](/images/sankaku23/30.png)
+
 ![](/images/sankaku23/31.png)
+
 ![](/images/sankaku23/32.png)
+
 ![](/images/sankaku23/33.png)
+
 ![](/images/sankaku23/34.png)
 
-Docker Desktopをインストールすると、Docker Composeも自動的にインストールされます。
 
 ```yml:docker-compose.yml
 version: '3.8'
@@ -129,7 +168,8 @@ volumes:
 
 ## さいごに
 
-ここまで記事を読んでくださり、ありがとうございました！今回は、ZennのPV数をGoogle Analyticsで確認する方法について紹介しました。興味を持った方は、ぜひGoogle Analyticsを利用してZennの執筆のモチベーションを上げていきましょう！
+ここまで記事を読んでくださり、ありがとうございました！
+
+今回は、Docker Composeについて紹介しました。私もまだまだ慣れていないため，今後も知識を養いながら，色々なことにチャレンジしてみたいです．
 
 **皆さんも素敵なハッピーDockerライフを！！！🌸**
-
