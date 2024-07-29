@@ -1,13 +1,13 @@
 ---
-title: "【初学者向け】Docker Composeの基礎"
+title: "【初学者向け】Docker Composeの基礎と実践"
 emoji: "🐦‍🔥"
 type: "tech"
 topics:
   - "dockerdesktop"
-  - "mysql"
+  - "yaml"
   - "docker"
   - "dockercompose"
-  - "wordpress"
+  - "cloud"
 published: false
 ---
 
@@ -52,18 +52,85 @@ docker compose version
 ```
 
 ![](/images/sankaku23/1.png)
-*最初から入っている*
+*別でインストールする必要がない*
 
 Docker Desktopって便利ですね〜！
 
 ## Docker Composeを使ってみる
 
+実際にDocker Composeを使って複数のコンテナを作成してみます．
+
+まず，「compose-test」という名前の作業用ディレクトリを作り，そこに移動します．
+
+```
+mkdir compose-test
+cd compose-test
+```
 
 ![](/images/sankaku23/2.png)
 
+移動したら，以下のコマンドで「mynetwork」という名前のDockerネットワークを作成します．
+
+```
+docker network create mynetwork
+```
+
 ![](/images/sankaku23/3.png)
+*Dockerネットワークを新規作成*
+
+`docker network ls`コマンドで確認すると、「mynetwork」が作成されていることが確認できました。
+
+```
+docker network ls
+```
 
 ![](/images/sankaku23/4.png)
+*「mynetwork」が存在している*
+
+
+
+
+
+
+```yml:docker-compose.yml
+version: '3.8'
+
+services:
+  wordpress-db:
+    image: mysql:5.7
+    platform: linux/amd64
+    networks:
+      - mynetwork
+    volumes:
+      - wordpress_db_volume:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: myrootpassword
+      MYSQL_DATABASE: wordpressdb
+      MYSQL_USER: wordpressuser
+      MYSQL_PASSWORD: wordpresspass
+
+  wordpress-app:
+    depends_on:
+      - wordpress-db
+    image: wordpress
+    networks:
+      - mynetwork
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: wordpress-db
+      WORDPRESS_DB_NAME: wordpressdb
+      WORDPRESS_DB_USER: wordpressuser
+      WORDPRESS_DB_PASSWORD: wordpresspass
+
+networks:
+  mynetwork:
+
+volumes:
+  wordpress_db_volume:
+```
 
 ![](/images/sankaku23/5.png)
 
@@ -125,46 +192,6 @@ Docker Desktopって便利ですね〜！
 
 ![](/images/sankaku23/34.png)
 
-
-```yml:docker-compose.yml
-version: '3.8'
-
-services:
-  wordpress-db:
-    image: mysql:5.7
-    platform: linux/amd64
-    networks:
-      - mynetwork
-    volumes:
-      - wordpress_db_volume:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: myrootpassword
-      MYSQL_DATABASE: wordpressdb
-      MYSQL_USER: wordpressuser
-      MYSQL_PASSWORD: wordpresspass
-
-  wordpress-app:
-    depends_on:
-      - wordpress-db
-    image: wordpress
-    networks:
-      - mynetwork
-    ports:
-      - "8080:80"
-    restart: always
-    environment:
-      WORDPRESS_DB_HOST: wordpress-db
-      WORDPRESS_DB_NAME: wordpressdb
-      WORDPRESS_DB_USER: wordpressuser
-      WORDPRESS_DB_PASSWORD: wordpresspass
-
-networks:
-  mynetwork:
-
-volumes:
-  wordpress_db_volume:
-```
 
 ## さいごに
 
