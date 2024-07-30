@@ -13,41 +13,97 @@ published: false
 
 ## はじめに
 
-私は現在大学4年生で、卒業論文の執筆にあたり、C言語を用いたシミュレーションを行うことになりました。そして，そのプログラムを効率的に管理するため、Githubでプログラムの管理することを決意しました。本記事は、その過程で得た知見と具体的な手順をまとめたものです。
+私は現在大学4年生で、卒業論文の執筆にあたり、C言語を用いたシミュレーションを行うことになりました。そして，そのプログラムをGithubで効率的に管理することにしました。本記事は、その過程で得た知見と具体的な手順をまとめたものです。
 
 この記事が、同じく卒業研究や学術プロジェクトに取り組む学生や研究者の方々にとって、有益な情報源となれば幸いです。
 
 ### 私の動作環境
 
-- MacOS Sonoma 14.5
-- git version 2.39.3 (Apple Git-146)
+MacOS Sonoma 14.5
 
 ## Githubとは？
 
-[**GitHub**](https://github.co.jp/)は、プログラムのソースコードをオンラインで共有・管理するためのサービスです。これは、ソースコードのバージョン管理システムであるGitを基にしています。
+[**GitHub**](https://github.co.jp/)は、プログラムのソースコードをオンラインで共有・管理するためのサービスです。これは、ソースコードのバージョン管理システムであるGitを基にしたものになっています。
 
 ## Githubで管理する
 
+### 1. Githubアカウントを作成する
+
+以下のリンクからGithubの公式サイトに飛ぶことができます．
+Githubアカウントを所持していない場合は，ここからサインアップしてアカウントを作成しましょう。
+既にアカウントを持っている場合は、ログインしましょう。
+
+https://github.com/
+
+### 2. GitHubリポジトリを作成する
+
+アカウントが作成できたら，ログインし、GitHubリポジトリを作成しましょう．
+GitHubリポジトリとは、**ファイルやディレクトリの保存・管理場所**のことです．
+
+画面右上のプラスアイコン（+）をクリックし、`New repository`を選択します。
+
+![](/images/sankaku24/1.png)
+*画面右上*
+
+プラスアイコンを押すと，リポジトリの設定画面に遷移します．
+まずは，リポジトリ名を決めましょう．私は「`graduation-thesis-program`」と名付けました．
+
+また，**GitHubのリポジトリは、「Public（公開）」と「Private（非公開）」のどちらかを設定する必要があります。**
+Publicにすると，誰でもアクセスできるようになり、コードを閲覧したり、フォークしたりすることが可能です。
+Privateリポジトリにすると，指定されたアカウントのみがアクセスできるようになり、コードの閲覧や変更を制限することができます。
+
+この設定は後から変更することも可能なので，とりあえず私はPrivateにしました．
+
+![](/images/sankaku24/2.png)
+*私の設定画面*
+
+:::details リポジトリ名は日本語でつけちゃダメ！
+:::message
+[一般的にリポジトリ名は日本語の使用が推奨されていません。](https://webooker.info/2015/06/git-repository-name-rule/)
+試しに，リポジトリ名を「卒論プログラム」にしてみると，ハイフンに置換されてしまいました．
+
+![](/images/sankaku24/3.png)
+*「卒論プログラム」と名付けてみる*
+
+![](/images/sankaku24/4.png)
+*ハイフンに置換されてしまった*
+:::
+
+他の部分は特に触らなくても大丈夫です．準備が整ったら，`Create repository`を選択しましょう。
+
+![](/images/sankaku24/5.png)
+*`Create repository`を選択*
+
+ここまでの手順を行うことで，GitHubリポジトリを作成することができます．
+
+![](/images/sankaku24/6.png)
+*GitHubリポジトリの作成成功*
+
+### 3. Gitにアップロードしたいものがあるディレクトリに移動する
 
 
 
-[GitHubのリポジトリ名に日本語を使用することは推奨されません。](https://webooker.info/2015/06/git-repository-name-rule/)
+### 4. `.gitignore`ファイルを作成する
 
-graduation-thesis-program
+.gitignoreファイルは、Gitで管理しないファイルやディレクトリを指定するための設定ファイルです，
 
 touch .gitignore
 
 ```.gitignore:.gitignore
-# Ignore all text files
+# Ignore object files
+*.o
+
+# Ignore text files
 *.txt
 
-# Ignore all GIF images
+# Ignore GIF images
 *.gif
 
 # Ignore macOS system files
 .DS_Store
 ```
 
+https://qiita.com/fuwamaki/items/3ed021163e50beab7154
 
 ```
 git init
@@ -77,17 +133,6 @@ git reset --hard 32be7e487dfef458020b12b946e6122fb50c44cm
 git push origin main --force
 ```
 
-![](/images/sankaku24/1.png)
-
-![](/images/sankaku24/2.png)
-
-![](/images/sankaku24/3.png)
-
-![](/images/sankaku24/4.png)
-
-![](/images/sankaku24/5.png)
-
-![](/images/sankaku24/6.png)
 
 ![](/images/sankaku24/7.png)
 
