@@ -20,7 +20,7 @@ published: false
 
 ### 私の動作環境
 
-- MacOS Sonoma 14.5
+MacOS Sonoma 14.5
 
 ## Githubとは？
 
@@ -37,7 +37,7 @@ graduation-thesis-program
 
 touch .gitignore
 
-```
+```.gitignore:.gitignore
 # Ignore all text files
 *.txt
 
