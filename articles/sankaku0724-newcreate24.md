@@ -8,7 +8,7 @@ topics:
   - "git"
   - "プログラミング"
   - "初心者"
-published: true
+published: false
 ---
 
 ## はじめに
