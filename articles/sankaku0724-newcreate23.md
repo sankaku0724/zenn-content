@@ -1,6 +1,6 @@
 ---
-title: "【初学者向け】Docker Composeの基礎と実践"
-emoji: "🐦‍🔥"
+title: "【初学者向け】Docker Composeを使ってみた"
+emoji: "💫"
 type: "tech"
 topics:
   - "dockerdesktop"
