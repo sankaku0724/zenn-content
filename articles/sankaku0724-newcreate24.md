@@ -25,7 +25,7 @@ published: false
 
 ### 筆者のGithubの知識について
 
-- ZennはGithubで管理している
+- [Zennの記事をGithubで管理している](https://zenn.dev/zenn/articles/connect-to-github)
 - その他は、大学の講義や本当にほんの少しだけ共同開発（と言えるほどでもない）でかじった程度
 - かなり初心者
 
