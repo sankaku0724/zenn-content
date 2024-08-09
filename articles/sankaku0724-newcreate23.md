@@ -42,7 +42,7 @@ https://docs.docker.com/
 
 Docker Composeを使用すると、**複数のコンテナを1つのYAMLファイルで定義し、単一のコマンドで一括して起動・停止できます.**
 これにより，**複数コンテナの一括管理ができます．**
-また，コンテナの設定やネットワーク、ボリュームなどをYAMLファイルで宣言的に記述できるため、複雑な環境でも設定を簡潔に管理でき，サービスの複製や拡張も容易になります.
+また，コンテナの設定やボリュームなどをYAMLファイルで宣言的に記述できるため、複雑な環境でも設定を簡潔に管理でき，サービスの複製や拡張も容易になります.
 
 Docker Composeのコマンド一覧は，以下のリンクから参照できます．
 
@@ -199,8 +199,6 @@ docker ps
 ![](/images/sankaku23/7.png)
 *二つのコンテナが稼働していることが確認できた*
 
-このように，**Docker Composeで稼動させたコンテナはDocker Composeとは関係ない形で稼動させたコンテナと遜色なく扱うことができる**ことがわかりました．
-
 次は，ネットワークについて確認してみます．
 
 ```
@@ -210,11 +208,33 @@ docker network ls
 ![](/images/sankaku23/8.png)
 *Docker Composeで作成したネットワークが存在している*
 
+実行結果から，**Docker Composeではネットワークも作成することができる**ということがわかりました．
+[自身で別にネットワークを作成する](https://zenn.dev/joho0724/articles/sankaku0724-newcreate23#2.-docker%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)必要はなかったということですね．
 
+また，ボリュームについても確認してみます．
+
+```
+docker volume ls
+```
 
 ![](/images/sankaku23/9.png)
+*二つのボリュームが確認できた*
+
+このように，**Docker Composeで稼動させたコンテナはDocker Composeとは関係ない形で稼動させたコンテナと遜色なく扱うことができる**ことがわかりました．
+
+### 6. WordPressの動作確認をする
+
+コンテナが稼動しましたが，本当にしっかり稼動できているのか確認するためにWordPressの動作確認をしてみます．
+
+:::message
+今回は，Docker Composeがメインなので，WordPressの詳細についてはそこまで説明しないことにします．
+:::
+
+ブラウザで[http://localhost:8080](http://localhost:8080/)にアクセスすると以下のような画面が表示されました．
 
 ![](/images/sankaku23/10.png)
+
+「日本語」を選択し，「次へ」をクリックして進みます．
 
 ![](/images/sankaku23/11.png)
 
@@ -225,6 +245,8 @@ docker network ls
 ![](/images/sankaku23/14.png)
 
 ![](/images/sankaku23/15.png)
+
+
 
 ![](/images/sankaku23/16.png)
 
