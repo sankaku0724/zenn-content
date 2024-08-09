@@ -1,5 +1,5 @@
 ---
-title: "Zennの画像の貼り付けをPythonで少しだけ楽にした"
+title: "PythonでZennの画像埋め込みリンクを生成"
 emoji: "🐍"
 type: "tech"
 topics:
@@ -75,6 +75,6 @@ Pythonに嫌悪感を持っている方もいるかもしれませんが、シ�
 
 ここまで記事を読んでくださり、ありがとうございました！
 
-[**アウトプットは素晴らしい**](https://zenn.dev/joho0724/articles/sankaku0724-newcreate6)ものです。さまざまな工夫を行うことで、記事を書くハードルを下げることも大切なことでしょう。
+**[アウトプットは素晴らしい](https://zenn.dev/joho0724/articles/sankaku0724-newcreate6)もの**です。さまざまな工夫を行うことで、記事を書くハードルを下げることも大切なことでしょう。
 
 **皆さんも素敵なハッピーZennライフを！！！🌸**
