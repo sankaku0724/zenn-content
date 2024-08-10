@@ -168,7 +168,8 @@ volumes:
 
 ### 4. Docker Composeでコンテナを稼働させる
 
-upコマンドでコンテナの作成と開始を行います．また，-dで端末から切り離してバックグラウンドで実行させます．
+[**`docker compose up`コマンド**](https://docs.docker.jp/engine/reference/commandline/compose_up.html)でコンテナの作成と開始を行います．
+また，-dで端末から切り離してバックグラウンドで実行させます．
 
 ```
 docker compose up -d
@@ -189,6 +190,8 @@ docker compose ps
 
 ![](/images/sankaku23/6.png)
 *二つのコンテナが稼働している*
+
+Docker Composeで起動したコンテナ名は、「作業用ディレクトリ名_コンテナ名_1」というような命名規則になります．
 
 `docker ps`でも確認してみます．
 
@@ -264,17 +267,49 @@ docker volume ls
 
 ### 7. Docker Composeでコンテナを停止させ，破棄する
 
+では、起動したコンテナー式を停止させ，破棄してみます。
+それには、[**`docker compose down`コマンド**](https://docs.docker.jp/compose/reference/down.html)を使います。`docker compose down`コマンドは、コンテナやネットワークを停止するだけでなく、それらを破棄するコマンドです。
+ただしデフォルトでは、ボリュームは削除しないようになっています．もし，ボリュームが削除された場合，データが永続化されなくなるからです．
+
+```
+docker compose down
+```
+
 ![](/images/sankaku23/16.png)
+
+`docker compose ps`で確認すると，コンテナが存在していないことが確認できました．
+
+```
+docker compose ps
+```
 
 ![](/images/sankaku23/17.png)
 
+`docker ps -a`でも同様です．
+
 ![](/images/sankaku23/18.png)
+
+次は，ネットワークについて確認してみます．
 
 ![](/images/sankaku23/19.png)
 
+こちらもDocker Composeで作成したものが存在していないことが確認できました．
+
 ![](/images/sankaku23/20.png)
 
+また，ボリュームについても確認してみます．
+
 ![](/images/sankaku23/21.png)
+
+こちらは残っています。
+そのため、もう一度、`docker compose up`を実行した場合、このボリュームの内容はそのまま使われるため、マウントしているMySQLコンテナが保存しているデータベースのデータが失われることはありません。
+
+### 8. 一つずつコンテナを操作する
+
+このように、`docker compose`コマンドではupとdownを指定することで、まとめて起動ならびに停止・破棄ができます．
+しかし、1つひとつのサービス（コンテナ）を操作したいこともあります。
+docker-composeで起動したコンテナは、普通のコンテナですから、もちろん、dockerコマンドを使って1つひとつ操作することもできます。しかし、起動したコンテナ名は、「作業用ディレクトリ名_コンテナ名_1」というような命名規則です。このように別名になることを考慮してコンテナを操作するのは、少し煩雑です。しかもdocker-composeで管理されているものを、dockerコマンドで操作すると、反故が生じる可能性もあります。
+こうした理由から、docker-composeで起動したコンテナなどは、docker-composeから操作すべきです。 docker-composeには、図表7-18に示すオプションがあり、これらのオプションを使えば、1つひとつのサービス（コンテナ）だけを停止したり、開始したりできます。
 
 ![](/images/sankaku23/22.png)
 
@@ -302,6 +337,11 @@ docker volume ls
 
 ![](/images/sankaku23/34.png)
 
+
+つまるところ、docker-compose upで全部起動、docker-compose downで全部停止および破棄という、まとめての操作ができるというのが、Docker Composeの機能です。本当にそれだけの機能で、賢くはありません。そのため、少し扱いに注意しなければならないことがあります。よく問題となるのは、起動時（docker-compose up）と停止時（docker-compose down）とで、docker-compose.ymlファイルが異なる場合です。
+docker-compose downは、実行時にカレントディレクトリに置かれているdocker-compose.ymlファイルを見て操作します。（docker-compose upを実行したときの）起動時の状態を把握しているわけではありません。例えばdocker-compose upしたときには、docker-compose.ymlファイルにコンテナAを使う設定があったけれども、そのあとdocker-compose.ymlを編集して、コンテナAを使う設定を削除した場合、docker-compose downすれば、そのコンテナAは除外され、破棄されることはありません。
+docker-compose downは、あくまでも、その時点のdocker-compose.ymlファイルの通りに動作します。
+docker-compose upしたあとにdocker-compose.ymlファイルを書き換えてしまい、docker-composedownしたときに、コンテナの削除残しや、意図しないコンテナやネットワークの削除が発生しないよう、注意してください。
 
 ## さいごに
 
