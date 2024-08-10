@@ -50,7 +50,7 @@ Zennで記事を執筆する際に、画像を載せたい時は以下のよう�
 
 以下のように、「number.py」というPythonプログラムを作成しました。
 
-```py:私の作成したnumber.py
+```py:number.py
 number = int(input("記事番号の入力："))
 count = int(input("画像の枚数の入力："))
 
