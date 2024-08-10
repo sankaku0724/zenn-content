@@ -171,7 +171,7 @@ gpファイルを使用することで、一回のコマンドで一連の処理
 
 Gnuplotは便利なツールです。今回はpng画像を作成しましたが、それ以外でも**様々な形式で保存することができます。**
 
-![](/images/sankaku26/animation.gif)
+![](/images/sankaku26/sine_wave_animation.gif)
 *私がGnuplotで作成したサイン波が徐々に動くアニメーション*
 
 :::details このアニメーションの描画方法
