@@ -238,6 +238,8 @@ docker volume ls
 
 ![](/images/sankaku23/11.png)
 
+
+
 ![](/images/sankaku23/12.png)
 
 ![](/images/sankaku23/13.png)
