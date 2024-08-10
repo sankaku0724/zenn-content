@@ -1,5 +1,5 @@
 ---
-title: "Gnuplotで図やグラフを簡単作成！"
+title: "Gnuplotで簡単に作る美しいグラフ"
 emoji: "📊"
 type: "tech"
 topics:
@@ -13,7 +13,7 @@ published: false
 
 ## はじめに
 
-皆さんは図を作成する時にどんなツールを使っていますか？
+皆さんはグラフや図を作成する時にどんなツールを使っていますか？
 
 PowerPoint？Excel？もしくはそれ以外？
 
@@ -35,11 +35,9 @@ PowerPoint？Excel？もしくはそれ以外？
 brew install gnuplot
 ```
 
-これで、Gnuplotを扱えるようになりました！
+## Gnuplotで図やグラフを表示させる
 
-## Gnuplotで図やグラフを表示させてみる
-
-試してみます。
+実際にGnuplotを使ってみます。
 
 ターミナルを開き、gnuplotと入力して起動すると、プロンプトがgnuplot>に変わります。
 
@@ -57,7 +55,6 @@ set xlabel "X-axis"
 set ylabel "Y-axis"
 plot sin(x) title "Sine Wave"
 ```
-![](/images/sankaku26/2.png)
 
 :::details コマンドの内容と説明
 - set title "Example Graph"
@@ -73,6 +70,8 @@ Y軸のラベルを`Y-axis`に設定します。このラベルはグラフのY�
 このコマンドで、Gnuplotはsin(x)関数をプロットし、グラフの曲線に`Sine Wave`というタイトルをつけます。plotコマンドは、データや関数をグラフ上に描画するために使われます。
 :::
 
+![](/images/sankaku26/2.png)
+
 実行すると、ウィンドウが表示され、sin(x)のグラフが確認できました！
 
 ![](/images/sankaku26/3.png)
@@ -82,7 +81,7 @@ Y軸のラベルを`Y-axis`に設定します。このラベルはグラフのY�
 
 ## Gnuplotで図やグラフを作成して保存する
 
-では、上記のグラフをpng画像として保存するために以下のようにコマンドを打ち込みます。
+では、上記のグラフをpng画像として保存するために、以下のようにコマンドを打ち込みます。
 
 ```
 set terminal png
@@ -93,8 +92,6 @@ set ylabel "Y-axis"
 plot sin(x) title "Sine Wave"
 set output
 ```
-
-![](/images/sankaku26/4.png)
 
 :::details 図として保存する手順
 - set terminal png
@@ -112,7 +109,9 @@ set output
 Gnuplotに描画が完了したことを通知します。
 :::
 
-このコマンドを実行すると、カレントディレクトリに「sine_wave.png」というファイル名で以下のような図を保存することができました。
+![](/images/sankaku26/4.png)
+
+このコマンドを実行すると、カレントディレクトリに「sine_wave.png」というファイル名で、以下のような図を保存することができました。
 
 ![](/images/sankaku26/sine_wave.png)
 *sine_wave.png*
@@ -124,13 +123,13 @@ Gnuplotを使うと、簡単に図を保存することができます！
 さて、Gnuplotで様々な形式の図を作成して保存することができるようになりましたが、毎回一つ一つコマンドを入力するのは面倒です。打ち間違えも怖いですしね。
 
 そこで、**gpファイル**を利用します。
-gpファイルは、gnuplotで使用するスクリプトファイルの一種です。これらのファイルには、gnuplotで実行するコマンドがテキスト形式で記述されています。gpファイルを使用することで、逐次的にコマンドを入力する代わりに、あらかじめ設定したコマンドを一度に実行することが可能になります。
+gpファイルは、gnuplotで使用するスクリプトファイルの一種です。これらのファイルには、gnuplotで実行するコマンドをテキスト形式で記述することができます。gpファイルを使用することで、逐次的にコマンドを入力する代わりに、あらかじめ設定したコマンドを一度に実行することが可能になります。
 
-「plot_cosine.gp」という名前のgpファイルを用意し、以下のように書き込んでみます。
+では、「plot_cosine.gp」という名前のgpファイルを用意し、以下のように書き込んでみます。
 また、今まではsin(x)関数をプロットしていましたが、今回はcos(x)関数をプロットしてみます。
 
 ```gp:plot_cosine.gp
-# 端末をpngに設定（jpeg、pdfなどに変更可能）
+# 保存したいファイルの形式をpngに設定（jpeg、pdfなどに変更可能）
 set terminal png
 
 # 出力ファイル名を設定
@@ -141,7 +140,7 @@ set title "Example Graph"
 set xlabel "X-axis"
 set ylabel "Y-axis"
 
-# コサイン波をプロット
+# コサイン波をプロット（先ほどはサイン波だった部分を変更）
 plot cos(x) title "Cosine Wave"
 
 # 出力を閉じてファイルを確定
@@ -156,7 +155,7 @@ gnuplot plot_cosine.gp
 
 ![](/images/sankaku26/5.png)
 
-実行すると、カレントディレクトリに「cosine_wave.png」というファイル名で以下のような図を保存することができました。
+実行すると、カレントディレクトリに「cosine_wave.png」というファイル名で、以下のような図を保存することができました。
 
 ![](/images/sankaku26/cosine_wave.png)
 *cosine_wave.png*
@@ -173,7 +172,7 @@ gpファイルを使用することで、一回のコマンドで一連の処理
 Gnuplotは便利なツールです。今回作成したpng画像以外にも**様々な形式で図やグラフを作成することができます。**
 
 ![](/images/sankaku26/animation.gif)
-*私がGnuplotで作成したgif画像*
+*私がGnuplotで作成したサイン波が徐々に動くアニメーション*
 
 論文やプレゼンに使う素材を生成する際に、大いに役立ってくれるでしょう！
 
