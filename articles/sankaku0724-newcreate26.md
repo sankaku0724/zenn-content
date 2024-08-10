@@ -1,6 +1,6 @@
 ---
-title: "Gnuplotで簡単に作る美しいグラフ"
-emoji: "📊"
+title: "Gnuplotで簡単に美しくグラフ作成"
+emoji: "🦢"
 type: "tech"
 topics:
   - "gnuplot"
@@ -77,7 +77,7 @@ Y軸のラベルを`Y-axis`に設定します。このラベルはグラフのY�
 ![](/images/sankaku26/3.png)
 *sin(x)のグラフ*
 
-このように、Gnuplotは数式やデータを入力することでグラフを出力することができます。
+このように、Gnuplotは数式やデータを入力することでグラフを出力することができます。終了したい場合は、`exit`と入力しましょう。
 
 ## Gnuplotで図やグラフを作成して保存する
 
@@ -173,6 +173,31 @@ Gnuplotは便利なツールです。今回作成したpng画像以外にも**�
 
 ![](/images/sankaku26/animation.gif)
 *私がGnuplotで作成したサイン波が徐々に動くアニメーション*
+
+:::details このアニメーションの描画方法
+```gp:sine_wave_animation.gp
+# 保存したいファイルの形式をGIFに設定
+set terminal gif animate delay 10
+
+# 出力ファイル名を設定
+set output 'sine_wave_animation.gif'
+
+# グラフの設定
+set title "Sine Wave Animation"
+set xlabel "X-axis"
+set ylabel "Y-axis"
+set xrange [0:2*pi]
+set yrange [-1:1]
+
+# フレームごとに異なる位相でサイン波をプロット
+do for [i=0:30] {
+    plot sin(x + i * 0.1) title sprintf("Phase = %.1f", i * 0.1)
+}
+
+# 出力を閉じてファイルを確定
+set output
+```
+:::
 
 論文やプレゼンに使う素材を生成する際に、大いに役立ってくれるでしょう！
 
