@@ -49,7 +49,8 @@ Docker Composeのコマンド一覧は、以下のリンクから参照できま
 https://docs.docker.jp/v1.12/compose/reference/overview.html#docker-compose
 
 ちなみに、[**Docker Desktopをインストールすると、Docker Composeも自動的にインストールされます。**](https://docs.docker.jp/compose/install/compose-desktop.html#docker-desktop-compose)
-私の環境で以下のコマンドを実行し、バージョン確認をしてみます。
+
+既にDocker Desktopがインストールしてある私の環境で以下のコマンドを実行し、バージョン確認をしてみます。
 
 ```
 docker compose version
@@ -95,9 +96,9 @@ docker network ls
 ![](/images/sankaku23/4.png)
 *「mynetwork」が存在している*
 
-### 3. `docker-compose.yml`を作成する
+### 3. 「docker-compose.yml」を作成する
 
-以下のような`docker-compose.yml`を作成してみます。
+以下のような「docker-compose.yml」を作成してみます。
 これはMySQLデータベースを使用したWordPress環境をセットアップするための記述です。
 
 ```yml:docker-compose.yml
@@ -141,7 +142,7 @@ volumes:
 ```
 
 :::details 作成したdocker-compose.ymlの詳細
-1. WordPressデータベースサービス (`wordpress-db`):
+1. WordPressデータベースサービス (**`wordpress-db`**):
 
 - `MySQL 5.7`のイメージを使用しています。
 - `platform`を`linux/amd64`に設定しています。
@@ -150,7 +151,7 @@ volumes:
 - コンテナが常に再起動するように設定しています。
 - 環境変数で、MySQLのルートパスワード、データベース名、ユーザー名、パスワードを指定しています。
 
-2. WordPressアプリケーションサービス (`wordpress-app`):
+2. WordPressアプリケーションサービス (**`wordpress-app`**):
 
 - `wordpress-db`サービスに依存しています（つまり、`wordpress-appはwordpress-db`が起動するまで待機します）。
 - WordPressの公式イメージを使用しています。
@@ -159,10 +160,10 @@ volumes:
 - 常に再起動するように設定されています。
 - 環境変数で、WordPressが使用するデータベースのホスト、名前、ユーザー名、パスワードを指定しています。
 
-3. ネットワーク (`mynetwork`):
+3. ネットワーク (**`mynetwork`**):
 - ここで定義しているネットワークを介して、サービス同士が通信できるようになります。
 
-4. ボリューム (`wordpress_db_volume`):
+4. ボリューム (**`wordpress_db_volume`**):
 - MySQLデータベースのデータを永続化するためのボリュームを定義しています。
 :::
 
@@ -178,11 +179,11 @@ docker compose up -d
 ![](/images/sankaku23/5.png)
 *実行画面*
 
-ここで「'version' is obsolete」という警告が出ていますが、どうやら[最新のDocker環境において、versionプロパティは非推奨](https://qiita.com/mai_llj/items/a91bb375af68a1c88469#version%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%AF%E9%9D%9E%E6%8E%A8%E5%A5%A8)らしいです。ビルド自体には問題ないそうなので、今回はこのまま作業を続行します。
+ここで「**`'version' is obsolete`**」という警告が出ていますが、どうやら[最新のDocker環境において、versionプロパティは非推奨](https://qiita.com/mai_llj/items/a91bb375af68a1c88469#version%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%AF%E9%9D%9E%E6%8E%A8%E5%A5%A8)らしいです。ビルド自体には問題ないそうなので、今回はこのまま続行します。
 
 ### 5. Docker Composeで何ができたのか確認する
 
-以下のように、[`docker compose ps`](https://docs.docker.jp/compose/reference/ps.html)でDocker Composeに関連するコンテナの一覧を表示してみると、二つのコンテナが稼働していることが確認できました。
+以下のように、[`docker compose ps`コマンド](https://docs.docker.jp/compose/reference/ps.html)でDocker Composeに関連するコンテナの一覧を表示してみると、二つのコンテナが稼働していることが確認できました。
 
 ```
 docker compose ps
@@ -191,9 +192,9 @@ docker compose ps
 ![](/images/sankaku23/6.png)
 *二つのコンテナが稼働している*
 
-Docker Composeで起動したコンテナ名は、「作業用ディレクトリ名_コンテナ名_1」というような命名規則になります。
+**Docker Composeで起動したコンテナ名は、「作業用ディレクトリ名_コンテナ名_1」というような命名規則になります。**
 
-`docker ps`でも確認してみます。
+`docker ps`コマンドでも確認してみます。
 
 ```
 docker ps
@@ -212,7 +213,7 @@ docker network ls
 *Docker Composeで作成したネットワークが存在している*
 
 実行結果から、**Docker Composeではネットワークも作成することができる**ということがわかりました。
-[自身で別にネットワークを作成する](https://zenn.dev/joho0724/articles/sankaku0724-newcreate23#2.-docker%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)必要はなかったということですね。
+[別にネットワークを作成する](https://zenn.dev/joho0724/articles/sankaku0724-newcreate23#2.-docker%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)必要はなかったということですね。
 
 また、ボリュームについても確認してみます。
 
@@ -230,7 +231,7 @@ docker volume ls
 コンテナが稼動しましたが、本当にしっかり稼動できているのか確認するためにWordPressの動作確認をしてみます。
 
 :::message
-今回は、Docker Composeがメインなので、WordPressの詳細についてはそこまで説明しないことにします。
+今回は、Docker Composeがメインなので、WordPressの詳細については説明しないことにします。
 :::
 
 ブラウザで[http://localhost:8080](http://localhost:8080/)にアクセスすると以下のような画面が表示されました。
@@ -262,14 +263,15 @@ docker volume ls
 これで、WordPressを扱えるようになりました。
 
 ![](/images/sankaku23/15.png)
+*サイトが閲覧できる*
 
 これで、Docker Composeで作成したコンテナが正常に動作していることが確認できました。
 
 ### 7. Docker Composeでコンテナを停止させ、破棄する
 
-では、起動したコンテナー式を停止させ、破棄してみます。
-それには、[**`docker compose down`コマンド**](https://docs.docker.jp/compose/reference/down.html)を使います。`docker compose down`コマンドは、コンテナやネットワークを停止するだけでなく、それらを破棄するコマンドです。
-ただしデフォルトでは、ボリュームは削除しないようになっています。もし、ボリュームが削除された場合、データが永続化されなくなるからです。
+では、起動したコンテナー式を[**`docker compose down`コマンド**](https://docs.docker.jp/compose/reference/down.html)で停止させ、破棄してみます。
+**`docker compose down`コマンドは、コンテナやネットワークを停止するだけでなく、それらを破棄するコマンドです。**
+ただし**デフォルトでは、ボリュームは削除しない**ようになっています。もし、ボリュームが削除された場合、データが永続化されなくなるからです。
 
 ```
 docker compose down
@@ -292,6 +294,7 @@ docker compose ps
 次は、ネットワークについて確認してみます。
 
 ![](/images/sankaku23/19.png)
+*「compose-test_mynetwork」が存在しない*
 
 こちらもDocker Composeで作成したものが存在していないことが確認できました。
 
@@ -307,7 +310,7 @@ docker compose ps
 このように、`docker compose`コマンドではupとdownを指定することで、まとめて起動ならびに停止・破棄ができます。
 しかし、一つずつコンテナを操作したいこともあるでしょう。
 しかし、Docker Composeで管理されているものを、dockerコマンドで操作すると反故が生じる可能性もあります。（設定の不整合や依存関係の破損など）
-こうした理由から、Docker Composeで起動したものは、Docker Composeから操作すべきです。
+こうした理由から、**Docker Composeで起動したものは、Docker Composeから操作すべきです。**
 
 #### 8.1 Docker Composeで起動する
 
@@ -334,7 +337,7 @@ docker compose exec wordpress-app /bin/bash
 ls /var/www/html
 ```
 
-`ls /var/www/html`コマンドは、LinuxやUnix系のオペレーティングシステムで使用されるコマンドで、指定されたディレクトリ`/var/www/html`の内容をリスト表示します。このディレクトリは、通常、Webサーバー（例えばApacheやNginx）のデフォルトのドキュメントルートとして使用され、ウェブサイトのファイルが格納されています。
+`ls /var/www/html`コマンドは、指定されたディレクトリ`/var/www/html`の内容をリスト表示します。このディレクトリは、通常、Webサーバーのデフォルトのドキュメントルートとして使用され、ウェブサイトのファイルが格納されています。
 
 ![](/images/sankaku23/22.png)
 *様々なものが格納されている*
@@ -364,7 +367,8 @@ docker compose stop wordpress-db
 
 ##### 8.4.1 docker compose start
 
-一つ目の方法は、`docker compose start wordpress-db`を実行することです。この場合、wordpress-dbだけが起動します。
+一つ目の方法は、`docker compose start wordpress-db`を実行することです。
+この場合、wordpress-dbだけが起動します。
 
 ![](/images/sankaku23/28.png)
 *`docker compose ps -a`で確認すると、両方とも起動しているのが確認できた*
@@ -381,7 +385,7 @@ docker compose stop wordpress-db
 
 ![](/images/sankaku23/31.png)
 
-**この場合、`docker-compose.yml`の内容が再実行され、それに伴って`wordpress-db`も起動します。**
+**この場合、「docker-compose.yml」の内容が再実行され、それに伴って`wordpress-db`も起動します。**
 
 ![](/images/sankaku23/32.png)
 *`docker compose ps -a`で確認すると、両方とも起動しているのが確認できた*
@@ -396,14 +400,14 @@ docker compose stop wordpress-db
 
 ざっくりまとめてみます。
 
-1. **docker-compose.ymlに記述する**
-稼動させたいコンテナ、ネットワーク、ボリュームの情報をdocker-compose.ymlファイルに記述します。
+1. **「docker-compose.yml」に記述する**
+稼動させたいコンテナ、ネットワーク、ボリュームの情報を「docker-compose.yml」ファイルに記述します。
 
 2. **`docker compose up`でまとめて起動する**
 docker-compose.ymlファイルを置いた場所をカレントディレクトリにし、`docker-compose up`を実行すると、まとめて起動させることができます。
 
 3. **`docker compose down`でまとめて停止・破棄する**
-`docker compose down`すると、まとめてコンテナが停止し、ネットワークと共に破棄されます。ただし、ボリュームは残ります。
+`docker compose down`を実行すると、まとめてコンテナが停止し、ネットワークと共に破棄されます。ただし、ボリュームは残ります。
 
 ここまで記事を読んでくださり、ありがとうございました！
 
