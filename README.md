@@ -7,10 +7,10 @@ Zenn CLIの表示がzenn.devと異なるときやCLI利用時に更新通知が�
 
 追加方法
 
-git add .
+`git add .`
 
-git commit -m "Updated README file with new instructions"
+`git commit -m "Updated README file with new instructions"`
 
-git push origin main
+`git push origin main`
 
-npx zenn previewで確認
+`npx zenn preview`で確認
