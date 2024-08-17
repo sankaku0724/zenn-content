@@ -8,7 +8,7 @@ topics:
   - "docker"
   - "dockercompose"
   - "cloud"
-published: false
+published: true
 ---
 
 ## はじめに
@@ -260,7 +260,7 @@ docker volume ls
 
 ![](/images/sankaku23/14.png)
 
-これで、WordPressを扱えるようになりました。
+上記の作業により、WordPressを扱えるようになりました。
 
 ![](/images/sankaku23/15.png)
 *サイトが閲覧できる*
