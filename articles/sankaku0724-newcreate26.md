@@ -8,7 +8,7 @@ topics:
   - "入門"
   - "homebrew"
   - "cli"
-published: false
+published: true
 ---
 
 ## はじめに
