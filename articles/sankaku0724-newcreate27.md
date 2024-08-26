@@ -110,7 +110,7 @@ Formspreeのフォーム作成時に指定したメールアドレスの受信�
 私はGithub Pagesで作成した[自分のホームページ](https://sankaku0724.github.io/)でFormspreeを利用しています。
 
 ![](/images/sankaku27/7.png)
-*2024年8月現在の私のホームページのコンタクトフォーム*
+*執筆時の私のホームページのコンタクトフォーム*
 
 Formspree最高〜！🥳~~Formspreeの回し者みたい~~
 
