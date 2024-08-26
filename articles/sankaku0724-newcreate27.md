@@ -33,7 +33,7 @@ https://formspree.io/
 
 ここからは、Formspreeを利用してコンタクトフォームを実装するための具体的な手順について紹介します。
 
-### Formspreeの登録
+### Formspreeの登録をする
 
 まず、Formspreeのアカウントを作成する必要があります。
 
@@ -112,7 +112,7 @@ Formspreeのフォーム作成時に指定したメールアドレスの受信�
 ![](/images/sankaku27/7.png)
 *2024年8月現在の私のホームページのコンタクトフォーム*
 
-Formspreeって便利ですね〜！
+Formspree最高〜！🥳~~Formspreeの回し者みたい~~
 
 ## さいごに
 
