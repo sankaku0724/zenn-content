@@ -107,7 +107,7 @@ Formspreeのフォーム作成時に指定したメールアドレスの受信�
 #### Formspreeをホームページに取り入れてみよう！
 
 この記事ではhtmlファイルだけで完結させていますが、cssファイルを用いてデザインを整えることももちろん可能です。
-私はGithub Pagesで作成した[自分のホームページ](https://sankaku0724.github.io/)でFormspreeを利用しています。
+私はGithub Pagesで作成した自分のホームページでFormspreeを利用しています。
 
 ![](/images/sankaku27/7.png)
 *執筆時の私のホームページのコンタクトフォーム*
