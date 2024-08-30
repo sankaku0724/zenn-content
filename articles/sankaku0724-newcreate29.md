@@ -6,7 +6,7 @@ topics:
   - "mac"
   - "sudo"
   - "security"
-  - "m1"
+  - "apple"
   - "sonoma"
 published: false
 ---
@@ -36,7 +36,9 @@ published: false
 
 ## 結論
 
-```
+[**xattrコマンド**](https://keith.github.io/xcode-man-pages/xattr.1.html)を使用しましょう。
+
+```:おい映司！これ使え！
 xattr -c <ファイル名>
 ```
 
@@ -48,16 +50,18 @@ xattr -c <ファイル名>
 
 ![](/images/sankaku29/6.png)
 
-macOSは、ダウンロードしたファイルに[**`com.apple.quarantine`という拡張属性**](https://iboysoft.com/jp/news/com-apple-quarantine.html)を付与することがあります。この属性は、ファイルが信頼できないソースからダウンロードされたことを示し、**実行を制限する**可能性があります。セキュリティが高いが故に⋯
+macOSは、ダウンロードしたファイルに[**`com.apple.quarantine`という拡張属性**](https://iboysoft.com/jp/news/com-apple-quarantine.html)を付与することがあるそうです。この属性は、ファイルが信頼できないソースからダウンロードされたことを示し、**実行を制限する**可能性があります。セキュリティが高いが故に⋯
 
 つまり、**この拡張属性を削除すれば良いのです。**
+
+macOSでファイルやディレクトリの拡張属性を表示、変更、削除するためには、xattrコマンドを使用する必要があります。
 
 :::details 参考記事
 https://qiita.com/KEINOS/items/e218c4d8da5451c9e59c
 https://qiita.com/kuma15/items/2c0037a740de8f1e0ca7
 :::
 
-以下のコマンドで指定したファイルの拡張属性をリスト表示できます。
+以下のコマンドのように、xattrコマンドにlオプションをつけることで指定したファイルの拡張属性をリスト表示できます。
 
 ```
 xattr -l <ファイル名>
@@ -66,7 +70,7 @@ xattr -l <ファイル名>
 ![](/images/sankaku29/4.png)
 *com.apple.quarantine属性がついている*
 
-以下のコマンドで指定したファイルの拡張属性を削除できます。
+そして、cオプションをつけることでで指定したファイルの拡張属性を削除できます。
 
 ```
 xattr -c <ファイル名>
