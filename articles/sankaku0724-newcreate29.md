@@ -8,7 +8,7 @@ topics:
   - "security"
   - "apple"
   - "sonoma"
-published: false
+published: true
 ---
 
 ## はじめに
