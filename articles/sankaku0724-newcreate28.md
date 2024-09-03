@@ -45,7 +45,7 @@ xcode-select --install
 brew update
 ```
 
-ここからが本題です．事前準備として，以下のコマンドを実行し、シミュレーションを行うにあたって必要なものをインストールします．
+ここからが本題です．事前準備として以下のコマンドを実行し、シミュレーションを行うにあたって必要なものをインストールします．
 
 ```
 brew install qt mercurial libxml2 pyenv gsl libgcrypt gtk cvs unar p7zip xz bzt bar dzr && brew install --cask doxygen cmake && pip3 install meson
@@ -78,7 +78,7 @@ cd ns-allinone-3.35/ns-3.35
 :::details 「operation not permitted: ./waf」が出てきて実行できない場合
 
 :::message
-[実行できない場合は，以下のコマンドを実行します．](https://zenn.dev/joho0724/articles/sankaku0724-newcreate29)
+[**実行できない場合は、以下のコマンドを実行しましょう。**](https://zenn.dev/joho0724/articles/sankaku0724-newcreate29)
 
 ```
 xattr -l waf
