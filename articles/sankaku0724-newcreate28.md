@@ -97,12 +97,13 @@ xattr -c waf
    このコマンドは、`waf`ファイルから全ての拡張属性を削除します。
    - `-c`オプションは「clear」を意味し、全ての拡張属性を消去します。
 
-macOSは、ダウンロードしたファイルに[**`com.apple.quarantine`という拡張属性**](https://iboysoft.com/jp/news/com-apple-quarantine.html)を付与することがあります。この属性は、ファイルが信頼できないソースからダウンロードされたことを示し、実行を制限する可能性があります。これらのコマンドを使用することで、wafスクリプトの実行に関する問題を解決できるかもしれません。
+macOSは、ダウンロードしたファイルに[**`com.apple.quarantine`という拡張属性**](https://iboysoft.com/jp/news/com-apple-quarantine.html)を付与することがあるそうです。そして，この属性はファイルが信頼できないソースからダウンロードされたことを示し、**実行を制限する**可能性があります。
 
 ![](/images/sankaku28/1.png)
 *私はこの作業を行うと実行できるようになりました*
 
 :::
+
 
 
 
