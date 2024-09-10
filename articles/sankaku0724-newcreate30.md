@@ -52,23 +52,22 @@ https://speakerdeck.com/
 ![](/images/sankaku30/3.png)
 *アカウント登録完了*
 
-また、アカウント設定から日本語にすることができます。やりたい方はやりましょう。
+また、設定から日本語表示にすることもできるようです。
 
 ![](/images/sankaku30/4.png)
 *日本語表示に変更*
 
 ### スライドを共有できるようにする
 
-では、スライドを共有できるようにします。
+では、スライドを共有してみます。
 「デッキをアップロードする」をクリックすると、以下のような画面が表示されます。
+公開したいPDFファイルを選択し、題名やディスクリプション（この二つは入力しなくてもいいらしい）、公開範囲を設定しましょう。
 
 ![](/images/sankaku30/5.png)
 
-公開したいPDFファイルを選択し、題名やディスクリプション（この二つは入力しなくてもいいらしい）、公開範囲を設定しましょう。
+これによって、スライドを共有することができました！
 
 ![](/images/sankaku30/6.png)
-
-これによって、スライドを共有することができました！
 
 共有用のリンクはスライドの右下から取得することができます。
 
@@ -82,6 +81,12 @@ https://speakerdeck.com/sankaku0724/sankakunotesuto
 ### Zennにスライドを埋め込んでみる
 
 では、Speaker DeckにアップロードしたスライドをZennに埋め込んでみます。
+記事の冒頭でも紹介しましたが、Speaker DeckにアップロードしたスライドをZennに埋め込むためには**スライドのID**が必要になります。
+
+```
+@[speakerdeck](スライドのID)
+```
+
 ここで、スライドのIDの値を確認するために、Speaker Deck上で`Copy javaScript embed code`を選択し、内容をコピーします。
 
 ![](/images/sankaku30/8.png)
@@ -92,7 +97,7 @@ https://speakerdeck.com/sankaku0724/sankakunotesuto
 <script defer class="speakerdeck-embed" data-id="01c5d829d9e0476b8fbfe634d0353a08" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 ```
 
-ここからスライドのIDである`data-id`の値を抜き出し、[ZennのMarkdown記法一覧](https://zenn.dev/zenn/articles/markdown-guide#speakerdeck)に則って記述してみます。
+ここからスライドのIDである`data-id`の値を抜き出し、[ZennのMarkdown記法一覧](https://zenn.dev/zenn/articles/markdown-guide#speakerdeck)に則って記述します。
 
 ```:私のテストスライドの場合
 @[speakerdeck](01c5d829d9e0476b8fbfe634d0353a08)
