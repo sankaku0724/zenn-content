@@ -19,14 +19,13 @@ published: false
 @[speakerdeck](スライドのID)
 ```
 
-Speaker Deckってなんや？ということで実際に試してみることにしました。
+この記述方法を実際に試してみることにしました。
 
 ## Speaker Deckってなんやねん
 
 **Speaker Deck**は、PDFファイルをアップロードすることで簡単に**スライドをWeb上で共有**できるサービスです。
-ユーザーは作成したスライドをPDF形式でアップロードし、オンラインで閲覧可能にすることができます。
 
-また、サイト内では検索が可能で、**他の人のスライドを閲覧する**ことができます。
+サイト内では検索が可能で、**他の人のスライドを閲覧する**こともできます。
 
 Speaker Deckには以下のリンクからアクセスできます。
 
@@ -74,14 +73,14 @@ https://speakerdeck.com/
 ![](/images/sankaku30/7.png)
 *`Copy like URL`をクリック*
 
-以下のリンクから共有されたスライドを確認することができます！
+コピーしたリンクが以下のものになります。ここから、共有されたスライドを確認することができます！
 
 https://speakerdeck.com/sankaku0724/sankakunotesuto
 
 ### Zennにスライドを埋め込んでみる
 
 では、Speaker DeckにアップロードしたスライドをZennに埋め込んでみます。
-記事の冒頭でも紹介しましたが、Speaker DeckにアップロードしたスライドをZennに埋め込むためには**スライドのID**が必要になります。
+記事の冒頭でも記載しましたが、Speaker DeckにアップロードしたスライドをZennに埋め込むためには**スライドのID**が必要になります。
 
 ```
 @[speakerdeck](スライドのID)
@@ -93,7 +92,7 @@ https://speakerdeck.com/sankaku0724/sankakunotesuto
 
 私のテストスライドの場合は以下のようにコピーされました。
 
-```js:私のテストスライドの場合
+```js:コピー内容
 <script defer class="speakerdeck-embed" data-id="01c5d829d9e0476b8fbfe634d0353a08" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 ```
 
