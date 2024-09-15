@@ -6,7 +6,7 @@ topics:
   - "zenn"
   - "powerpoint"
   - "pdf"
-  - "初心者"
+  - "markdown"
   - "speakerdeck"
 published: false
 ---
