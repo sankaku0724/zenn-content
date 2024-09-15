@@ -113,7 +113,7 @@ https://speakerdeck.com/sankaku0724/sankakunotesuto
 ここまで記事を読んでくださり、ありがとうございました！
 
 Speaker Deckはプレゼンテーション資料の共有を効率化してくれる便利なツールです。
-以下のスライドはLaTeXのBeamerで作成したものですが、PowerPoint以外作成したPDFでも問題なく共有することができます。
+以下のスライドはLaTeXのBeamerで作成したものですが、PowerPoint以外で作成したPDFでも問題なく共有することができます。
 
 @[speakerdeck](4a54a2292d0847a8a64a098ce4ffbe79)
 
