@@ -119,7 +119,7 @@ COPY app.py /app
 CMD ["python", "app.py"]
 ```
 
-:::details Dockerfileの内容の説明
+:::details Dockerfileの構成
 1. `Python 3.9`の`slim`（軽量）バージョンをベースイメージとして使用
 2. コンテナ内の作業ディレクトリを`/app`に設定
 3. ローカルの`app.py`ファイルをコンテナの`/app`ディレクトリにコピー
@@ -166,8 +166,7 @@ docker image ls
 
 ### 5. コンテナを実行する
 
-では、以下のコマンドのようにして、`my-python-app`イメージのタグを指定してコンテナを起動します。
-このコマンドが実行されると、`my-python-app`イメージに基づいて新しいコンテナが作成され、コンテナ内で指定されたアプリケーションが動き始めます。
+では、以下のコマンドを実行し、`my-python-app`イメージのタグを指定してコンテナを起動します。
 
 ```
 docker run my-python-app
