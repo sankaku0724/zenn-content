@@ -1,6 +1,6 @@
 ---
 title: "Xcodeをインストールする"
-emoji: "🍎"
+emoji: "🔨"
 type: "tech"
 topics:
   - "xcode"
