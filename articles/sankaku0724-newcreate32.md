@@ -1,5 +1,5 @@
 ---
-title: "XcodeをmacOSにインストールする"
+title: "Xcodeをインストールする"
 emoji: "🍎"
 type: "tech"
 topics:
@@ -44,12 +44,12 @@ https://developer.apple.com/jp/xcode/
 完了するまで待ちましょう。私の環境では大体10分程度かかりました。
 
 完了したら、Xcodeの利用に関する「[**Xcode and Apple SDKs Agreement**](https://www.apple.com/legal/sla/docs/xcode.pdf)」のライセンス契約内容を確認し、同意しましょう。
-これにより、ライセンスに同意し、Xcodeの利用を進めることができます。
+これにより、Xcodeの利用を進めることができます。
 
 ![](/images/sankaku32/4.png)
 *「Agree（同意する）」をクリック*
 
-同意したら、以下のような画面が表示されます。「Install」をクリックしましょう。
+同意すると、以下のような画面が表示されます。「Install」をクリックしましょう。
 
 ![](/images/sankaku32/5.png)
 
