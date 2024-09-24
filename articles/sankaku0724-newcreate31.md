@@ -24,7 +24,7 @@ published: false
 - Docker Desktop 4.34.2 (167172)
 - Docker Engine 27.2.0
 - Dockerfile v2.29.2-desktop.2
-- MacOS Sonoma 14.6
+- MacOS Sonoma 14.6.1
 
 ## Dockerコマンド一覧
 
