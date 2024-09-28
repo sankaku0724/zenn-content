@@ -8,7 +8,7 @@ topics:
   - "docker"
   - "dockerfile"
   - "python"
-published: false
+published: true
 ---
 
 ## はじめに
