@@ -7,7 +7,7 @@ topics:
   - "mac"
   - "apple"
   - "appstore"
-  - "m1"
+  - "入門"
 published: false
 ---
 
