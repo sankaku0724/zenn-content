@@ -31,7 +31,7 @@ https://developer.apple.com/jp/xcode/swiftui/
 ## SwiftUIのチュートリアルをやってみる
 
 まず、**Xcodeがインストールされている環境**が必要です。
-もし、インストールしていなければ以下の記事などを参考にインストールしましょう。
+もし、インストールしていなければ、以下の記事（~~私の記事の宣伝~~）などを参考にインストールしましょう。
 
 https://zenn.dev/joho0724/articles/sankaku0724-newcreate32
 
@@ -51,7 +51,7 @@ Swift初心者にもわかりやすく教えてくれます。
 ![](/images/sankaku33/3.png)
 *丁寧に教えてくれます！*
 
-私はXcodeやSwiftUIを使用するのは初めてでしたが、個人的な感覚としてはAndroidStudioでの開発に近いものを感じました。
+私はXcodeやSwiftUIを使用するのは初めてでしたが、個人的な感覚としてはAndroid Studioでの開発に近いものを感じました。
 
 ## さいごに
 
