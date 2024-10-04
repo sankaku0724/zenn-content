@@ -1,15 +1,64 @@
 ---
-title: "メモ"
-emoji: "😝"
-type: "idea"
+title: "SwiftUIのチュートリアルをやってみた"
+emoji: "🐣"
+type: "tech"
 topics:
-  - "zenn"
-  - "初心者"
-  - "ポエム"
-  - "初心者向け"
-  - "アウトプット"
+  - "swift"
+  - "swiftui"
+  - "apple"
+  - "xcode"
+  - "mac"
 published: false
 ---
 
 ## はじめに
 
+Apple Developer公式サイトにある[**SwiftUIのチュートリアル**](https://developer.apple.com/tutorials/swiftui/)のChapter 1をやってみました。
+
+### 私の動作環境
+- MacBook Air M1 2020
+- メモリ 16GB
+- MacOS Sonoma 14.6.1
+
+## SwiftUIってなんやねん
+
+**SwiftUI**は、Appleが[Swift](https://developer.apple.com/jp/swift/)で開発した宣言的なユーザーインターフェースフレームワークです。iOSやmacOSなどに向けたアプリを簡単に構築できるように設計されており、UIをコードで記述してリアルタイムでプレビューを確認できます。
+
+以下のリンクからSwiftUIの公式ドキュメントを確認することができます。
+
+https://developer.apple.com/jp/xcode/swiftui/
+
+## SwiftUIのチュートリアルをやってみる
+
+まず、**Xcodeがインストールされている環境**が必要です。
+もし、インストールしていなければ以下の記事などを参考にインストールしましょう。
+
+https://zenn.dev/joho0724/articles/sankaku0724-newcreate32
+
+インストールが完了したら、SwiftUIのチュートリアルを始めるために、Apple Developer公式サイトにアクセスします。
+
+https://developer.apple.com/tutorials/swiftui/
+
+説明に沿ってチュートリアルを進めましょう。
+Swift初心者にもわかりやすく教えてくれます。
+
+![](/images/sankaku33/1.png)
+*簡単な表示からスタート*
+
+![](/images/sankaku33/2.png)
+*様々なUI設計*
+
+![](/images/sankaku33/3.png)
+*丁寧に教えてくれます！*
+
+私はXcodeやSwiftUIを使用するのは初めてでしたが、個人的な感覚としてはAndroidStudioでの開発に近いものを感じました。
+
+## さいごに
+
+ここまで記事を読んでくださり、ありがとうございました！
+
+SwiftUIを使用することで、様々な開発を行えるようになります。私は普段からあまり開発をしてこなかった人間なので新鮮な気持ちになれました！
+
+興味を持った方はぜひ一度試してみてください！
+
+**皆さんも素敵なハッピーSwiftUIライフを！！！🌸**
