@@ -33,7 +33,7 @@ https://developer.apple.com/jp/xcode/swiftui/
 まず、**Xcodeがインストールされている環境**が必要です。
 もし、インストールしていなければ、以下の記事（~~私の記事の宣伝~~）などを参考にインストールしましょう。
 
-https://zenn.dev/joho0724/articles/sankaku0724-newcreate32
+
 
 インストールが完了したら、SwiftUIのチュートリアルを始めるために、Apple Developer公式サイトにアクセスします。
 
