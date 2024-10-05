@@ -40,7 +40,7 @@ https://zenn.dev/joho0724/articles/sankaku0724-newcreate32
 https://developer.apple.com/tutorials/swiftui/
 
 説明に沿ってチュートリアルを進めましょう。
-Swift初心者にもわかりやすく教えてくれます。
+あの天下のApple公式が出しているだけあって、Swift初心者にもわかりやすく教えてくれます。
 
 ![](/images/sankaku33/1.png)
 *簡単な表示からスタート*
@@ -49,7 +49,7 @@ Swift初心者にもわかりやすく教えてくれます。
 *様々なUI設計*
 
 ![](/images/sankaku33/3.png)
-*丁寧に教えてくれます！*
+*初心者にも丁寧に教えてくれます！*
 
 私はXcodeやSwiftUIを使用するのは初めてでしたが、個人的な感覚としてはAndroid Studioでの開発に近いものを感じました。
 
