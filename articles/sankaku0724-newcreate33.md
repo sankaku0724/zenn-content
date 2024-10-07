@@ -7,7 +7,7 @@ topics:
   - "swiftui"
   - "apple"
   - "xcode"
-  - "mac"
+  - "ios"
 published: false
 ---
 
