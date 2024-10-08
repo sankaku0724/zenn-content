@@ -51,6 +51,8 @@ https://developer.apple.com/tutorials/swiftui/
 ![](/images/sankaku33/3.png)
 *初心者にも丁寧に教えてくれます！*
 
+https://x.com/triangle0724/status/1843668982571966684
+
 私はXcodeやSwiftUIを使用するのは初めてでしたが、個人的な感覚としてはAndroid Studioでの開発に近いものを感じました。
 
 ## さいごに
