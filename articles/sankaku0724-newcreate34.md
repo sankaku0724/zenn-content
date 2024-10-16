@@ -61,14 +61,13 @@ https://www.oracle.com/jp/java/technologies/downloads/#jdk23-mac
 
 ダウンロードし、インストールまで完了したらパスを設定します。
 **私は`JAVA_HOME`環境変数にJDKのパスを追加**しました。
+`JAVA_HOME`は、JavaベースのツールがどのJDKを使用すべきかを指定するための環境変数です。
 
-```:Zshの設定ファイルの編集コマンド
+```:Zshの設定ファイルの編集コマンド(別にvimじゃなくても良いです)
 vim .zshrc
 ```
 
-`JAVA_HOME`は、JavaベースのツールがどのJDKを使用すべきかを指定するための環境変数です。
-
-```.zshrc:私の追加したパス
+```:私の追加したパス
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-23.jdk/Contents/Home
 ```
 
