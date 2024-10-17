@@ -49,14 +49,14 @@ struct ContentView_Previews: PreviewProvider {
 
 ## 結論
 
-**[Java公式サイト](https://www.oracle.com/jp/java/technologies/downloads/#jdk23-mac)からJDK(Java Development Kit)をインストールし、`JAVA_HOME`環境変数を適切に設定した**ところ、問題が解消されました。
+**[オラクル公式サイト](https://www.oracle.com/jp/java/technologies/downloads/#jdk23-mac)からJDK(Java Development Kit)をインストールし、`JAVA_HOME`環境変数を適切に設定した**ところ、問題が解消されました。
 
 ## 説明
 
 `Kotlin Multiplatform`は`Java Virtual Machine(JVM)`で動作するKotlinコードを使用します。
 そのため、**KMPプロジェクトのビルドにはJDKが必要**です。
 
-まず、Java公式サイトからJDKをダウンロードしました。
+まず、オラクル公式サイトからJDKをダウンロードしました。
 私は「ARM64 DMG Installer」を選択しましたが、ご自身の環境に合わせてご判断ください。
 
 https://www.oracle.com/jp/java/technologies/downloads/#jdk23-mac
