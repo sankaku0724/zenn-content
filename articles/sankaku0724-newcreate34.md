@@ -49,7 +49,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ## 結論
 
-**[オラクル公式サイト](https://www.oracle.com/jp/java/technologies/downloads/#jdk23-mac)からJDK(Java Development Kit)をインストールし、`JAVA_HOME`環境変数を適切に設定した**ところ、問題が解消されました。
+**[オラクル公式サイト](https://www.oracle.com/jp/)からJDK(Java Development Kit)をインストールし、`JAVA_HOME`環境変数を適切に設定した**ところ、問題が解消されました。
 
 ## 説明
 
