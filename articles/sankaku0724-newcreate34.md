@@ -8,7 +8,7 @@ topics:
   - "kmp"
   - "java"
   - "jdk"
-published: false
+published: true
 ---
 
 ## はじめに
