@@ -7,7 +7,7 @@ topics:
   - "cloud"
   - "docker"
   - "network"
-  - "ネットワーク"
+  - "初心者"
 published: true
 ---
 
