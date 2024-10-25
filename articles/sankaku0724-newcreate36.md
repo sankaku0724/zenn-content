@@ -8,7 +8,8 @@ topics:
   - "math"
   - "アルゴリズム"
   - "データ分析"
-published: false
+published: true
+published_at: 2024-10-26 12:00
 ---
 
 ## はじめに
