@@ -8,7 +8,8 @@ topics:
   - "python3"
   - "プログラミング"
   - "mac"
-published: false
+published: true
+published_at: 2024-11-2 12:00
 ---
 
 ## はじめに
