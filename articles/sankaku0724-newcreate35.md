@@ -9,7 +9,7 @@ topics:
   - "プログラミング"
   - "mac"
 published: true
-published_at: 2024-11-2 12:00
+published_at: 2024-11-02 12:00
 ---
 
 ## はじめに
