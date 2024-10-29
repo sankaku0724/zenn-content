@@ -9,6 +9,7 @@ topics:
   - "java"
   - "jdk"
 published: true
+publication_name: "cocban_blog"
 ---
 
 ## はじめに
