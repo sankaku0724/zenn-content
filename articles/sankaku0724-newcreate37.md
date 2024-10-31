@@ -13,7 +13,7 @@ published: false
 
 ## はじめに
 
-この記事は、「[小川晃通 著, プロフェッショナルIPv6 第2版, ラムダノート](https://www.lambdanote.com/products/ipv6-2)」の2.10節の内容を参考に、IPv4とIPv6の違いをまとめたものになります。
+この記事は「[小川晃通 著, プロフェッショナルIPv6 第2版, ラムダノート](https://www.lambdanote.com/products/ipv6-2)」の2.10節の内容を参考に、IPv4とIPv6の違いをまとめたものになります。
 
 :::message
 もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
