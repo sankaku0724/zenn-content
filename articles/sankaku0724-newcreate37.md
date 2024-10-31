@@ -111,7 +111,7 @@ IPv4では、**IPv4ヘッダに含まれるフィールドを利用**してIPパ
 
 ### パケットサイズ
 
-IPv4の基本仕様を規定する[RFC791](https://datatracker.ietf.org/doc/html/rfc791)では、“Allhosts must be prepared to accept datagrams of up to 576 octets”（「**最低でも576オクテットのデータグラムを受け取れるように準備していなければならない**」）と記述されています。
+IPv4の基本仕様を規定する[RFC791](https://datatracker.ietf.org/doc/html/rfc791)では、“All hosts must be prepared to accept datagrams of up to 576 octets”（「**最低でも576オクテットのデータグラムを受け取れるように準備していなければならない**」）と記述されています。
 その上で、受信相手がそれ以上のサイズのデータグラムを受け取れるという保証がある場合、送信側が576オクテット以上のパケットを送信することを推奨しています。
 
 一方、IPv6の基本仕様を規定する[RFC8200](https://datatracker.ietf.org/doc/html/rfc8200)では、“IPv6 requires that every link in the Internet have an MTU of 1280 octets or greater”（「**IPv6はインターネットにおけるすべてのリンクが1280オクテットもしくはそれ以上のMTUであることを要求する**」）と記述されています。
@@ -150,9 +150,9 @@ IPv6では、**ブロードキャストが廃止**され、その機能の多く
 
 ここまで記事を読んでくださり、ありがとうございました！
 
-この記事ではIPv4とIPv6の違いについて紹介しましたが、より詳しく知りたい方は「[小川晃通 著, プロフェッショナルIPv6 第2版, ラムダノート](https://www.lambdanote.com/products/ipv6-2)」や[小川晃通氏のYouTube](https://www.youtube.com/@geekpage)などを参考にしてください！
+この記事ではIPv4とIPv6の違いについて紹介しましたが、より詳しく知りたい方は「[小川晃通 著, プロフェッショナルIPv6 第2版, ラムダノート](https://www.lambdanote.com/products/ipv6-2)」や[小川晃通氏のYouTube動画](https://www.youtube.com/@geekpage)などを参考にしてください！
 
-また、[プロフェッショナルIPv6のPDF版は無料で利用可能](https://forest.watch.impress.co.jp/library/software/proipv6/)なので、興味を持った方はぜひ読んでみてください！
+また、[プロフェッショナルIPv6のPDF版は無料で利用可能](https://forest.watch.impress.co.jp/library/software/proipv6/)なので、IPv6に興味を持った方はぜひ読んでみてください！
 
 ネットワークは良いですよ！！！
 
