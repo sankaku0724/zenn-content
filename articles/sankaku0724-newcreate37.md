@@ -1,5 +1,5 @@
 ---
-title: "【初学者向け】IPv4とIPv6の違いをまとめてみた"
+title: "IPv4とIPv6の違いまとめ"
 emoji: "🌍"
 type: "tech"
 topics:
@@ -8,7 +8,8 @@ topics:
   - "network"
   - "初心者"
   - "入門"
-published: false
+published: true
+published_at: 2024-11-09 12:00
 ---
 
 ## はじめに
