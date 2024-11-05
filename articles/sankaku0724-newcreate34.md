@@ -14,7 +14,11 @@ publication_name: "cocban_blog"
 
 ## はじめに
 
-Android Studioで`Kotlin Multiplatform(KMP)`を使用してiOSアプリを作成し、Xcodeでそのアプリを開いた際に`import shared`でモジュールが正しくインポートされず、エラーが発生してしまいました。
+Android Studioで`Kotlin Multiplatform(KMP)`を使用してiOSアプリを作成し、Xcodeでそのアプリを開いた際に`import shared`でモジュールが正しくインポートされず、「`No such module 'shared'`」というエラーが発生してしまいました。
+
+![](/images/sankaku34/error.png)
+
+![](/images/sankaku34/error2.png)
 
 ```swift:ContentView（2行目でエラー発生）
 import SwiftUI
