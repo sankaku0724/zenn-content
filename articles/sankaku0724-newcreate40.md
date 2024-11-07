@@ -8,7 +8,8 @@ topics:
   - "kmp"
   - "xcode"
   - "kotlin"
-published: false
+published: true
+published_at: 2024-11-10 12:00
 publication_name: "cocban_blog"
 ---
 
