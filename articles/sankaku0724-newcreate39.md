@@ -8,7 +8,8 @@ topics:
   - "はてなブックマーク"
   - "はてなブログ"
   - "初心者"
-published: false
+published: true
+published_at: 2024-11-16 12:00
 ---
 
 ## はじめに
