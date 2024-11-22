@@ -8,7 +8,9 @@ topics:
   - "kmp"
   - "xcode"
   - "ios"
-published: false
+published: true
+published_at: 2024-11-30 12:00
+publication_name: "cocban_blog"
 ---
 
 ## はじめに
