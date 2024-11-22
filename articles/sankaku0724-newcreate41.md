@@ -1,5 +1,5 @@
 ---
-title: "【KMP】Xcodeのビルド時に発生するSQLite3エラーの対処法"
+title: "【KMP】Xcodeのビルドで発生するSQLite3エラーの対処法"
 emoji: "🛠️"
 type: "tech"
 topics:
