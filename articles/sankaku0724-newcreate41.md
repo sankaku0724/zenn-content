@@ -33,7 +33,7 @@ Android Studioで`Kotlin Multiplatform(KMP)`を使用してiOSアプリを作成
 
 ## 結論
 
-**XcodeプロジェクトのBuild Settingsで"Other Linker Flags"に「`-lsqlite3`」を追加**すると解決できました。
+**XcodeプロジェクトのBuild Settingsで、Other Linker Flagsに「`-lsqlite3`」を追加**すると解決できました。
 
 ## 手順
 
@@ -68,6 +68,6 @@ Other Linker Flagsを発見したら、ダブルクリックして編集モー�
 
 ここまで記事を読んでくださり、ありがとうございました！
 
-この記事が少しでも皆様の開発の手助けになることができれば嬉しいです！
+この記事が少しでも皆様の手助けになることができれば幸いです！
 
 **皆さんも素敵なハッピーKMPライフを！！！🌸**
