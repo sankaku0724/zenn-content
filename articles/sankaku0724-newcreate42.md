@@ -17,7 +17,8 @@ publication_name: "cocban_blog"
 
 Android Studioで`Kotlin Multiplatform(KMP)`を使用して開発した際に、`ScrollableTabRow`内に`LazyRow`を配置すると**アプリがクラッシュする問題**が発生しました。
 
-```kotlin:例（実際の開発で使用しているものではありません）
+:::details 実行例
+```kotlin:※実際の開発で使用しているものではありません
 @Composable
 fun ExampleTabRow(
     coroutineScope: CoroutineScope,
@@ -52,6 +53,7 @@ fun ExampleTabRow(
     }
 }
 ```
+:::
 
 この記事は、私がその問題を解決した方法について紹介するものになります。
 
@@ -63,7 +65,7 @@ fun ExampleTabRow(
 
 ## 結論
 
-レイアウトの競合が発生しています。
+**レイアウトの競合**が発生しています。
 `ScrollableTabRow`内に`LazyRow`ではなく別のものを配置しましょう。
 
 ## 説明
@@ -77,7 +79,8 @@ fun ExampleTabRow(
 解決するには、ジェットコースターにそのまま並べば良いだけの話なのです。
 今回、私は`LazyRow`を使わずに`forEachIndexed`で一つずつ`TabItem`を追加することで、正常に動作するように修正しました。
 
-```kotlin:修正後
+:::details 修正後
+```kotlin:※実際の開発で使用しているものではありません
 @Composable
 fun ExampleTabRow(
     coroutineScope: CoroutineScope,
@@ -108,6 +111,7 @@ fun ExampleTabRow(
     }
 }
 ```
+:::
 
 レイアウトを組む時は、各コンポーネントを適切に使用しましょう！
 
@@ -115,7 +119,7 @@ fun ExampleTabRow(
 
 ここまで記事を読んでくださり、ありがとうございました！
 
-各コンポーネントのスクロール特性を理解することで、適切なレイアウトを組みましょう。
+UIを実装する時は各コンポーネントのスクロール特性を理解することが大事ですね。
 
 **皆さんも素敵なハッピーKMPライフを！！！🌸**
 
