@@ -1,6 +1,6 @@
 ---
 title: "Slackの認証エラーの原因と対処法"
-emoji: "🫶"
+emoji: "#️⃣"
 type: "tech"
 topics:
   - "slack"
@@ -8,7 +8,8 @@ topics:
   - "api"
   - "認証"
   - "トラブルシューティング"
-published: false
+published: true
+published_at: 2025-04-05 12:00
 ---
 
 ## はじめに
@@ -43,7 +44,7 @@ Slackでは複数のワークスペースに所属できるため、誤ったア
 まずはSlackアプリを開きましょう。
 左下の自身のアイコンをクリックし、「プロフィール」を選択した後、「…（三点リーダー）」をクリックしましょう。
 
-![](/images/sankaku43/2.png =300x)
+![](/images/sankaku43/2.png =250x)
 
 ここで「アカウント設定」を選択することでアカウントを切り替えることができます。
 
