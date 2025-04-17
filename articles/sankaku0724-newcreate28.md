@@ -55,7 +55,6 @@ brew install qt mercurial libxml2 pyenv gsl libgcrypt gtk cvs unar p7zip xz bzt 
 
 :::message
 場合によっては、割と時間がかかるかもしれません。
-私の場合は一時間以上かかりました⋯
 :::
 
 次にpyenvを使って3.9系のPythonをインストールします。
@@ -94,27 +93,62 @@ CXXFLAGS="-std=c++17" ./waf configure
 
 `CXXFLAGS`はC++のコンパイル時のフラグを渡すために使う変数であり、`-std=c++17`は、「**このプロジェクトをC++17でビルドしてね**」という指定をするものです。
 ns-3.35は一部の機能が`C++17`を前提としており、macOSに標準で入っているApple clangを使っている場合、デフォルトのC++規格が`c++17`未満になっていることが多く、明示的に`-std=c++17`を指定しないとns-3.35のビルドが失敗することがあります。私はうまくいきませんでした。
-~~普通にGCC使えば良くないとか言われたらぐうの音も出ません~~
+~~普通にGCC使えば良くない？とか言われたらぐうの音も出ません~~
 
-成功したらサンプルを実行してみます。
+成功したらns-3に初めから付属しているサンプルを実行してみます。
 
 ```
 ./waf --run scratch-simulator
 ```
 
+:::details サンプルファイルの中身
+```cpp:scratch-simulator.cc（実行するとターミナルに「Scratch Simulator」と表示される）
+/* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
+/*
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation;
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+
+#include "ns3/core-module.h"
+
+using namespace ns3;
+
+NS_LOG_COMPONENT_DEFINE ("ScratchSimulator");
+
+int 
+main (int argc, char *argv[])
+{
+  NS_LOG_UNCOND ("Scratch Simulator");
+
+  Simulator::Run ();
+  Simulator::Destroy ();
+}
+```
+
+「Hello World」的なサンプルということですね。
+
+:::
+
 ![](/images/sankaku28/1.jpg)
 *正常に実行できている*
 
-これでmacOSでns-3.35を使えるようになりました！
+これでmacOSでns-3を使えるようになりました！
 
 ## さいごに
 
 ここまで記事を読んでくださり、ありがとうございました！
-
 今回は、ns-3を利用できるようにするための環境構築方法について紹介しました。
-
 ns-3を利用することで、さまざまなネットワーク環境のシミュレーションを効果的に行うことができます。
-
 私もまだまだ不慣れなので、少しずつ学んでいきたいです。
 
 **皆さんも素敵なハッピーns-3ライフを！！！🌸**
