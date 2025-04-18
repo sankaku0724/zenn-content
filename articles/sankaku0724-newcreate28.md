@@ -1,5 +1,5 @@
 ---
-title: "macOSでns-3を使えるようにするまでの手順"
+title: "【macOS】ns-3を使えるようにするまでの手順"
 emoji: "🛜"
 type: "tech"
 topics:
@@ -102,23 +102,8 @@ ns-3.35は一部の機能が`C++17`を前提としており、macOSに標準で�
 ```
 
 :::details サンプルファイルの中身
-```cpp:scratch-simulator.cc（実行するとターミナルに「Scratch Simulator」と表示される）
-/* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
-/*
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as
- * published by the Free Software Foundation;
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- */
 
+```cpp:scratch-simulator.cc（実行すると「Scratch Simulator」と表示される）
 #include "ns3/core-module.h"
 
 using namespace ns3;
