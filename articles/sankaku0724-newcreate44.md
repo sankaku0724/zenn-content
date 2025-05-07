@@ -28,7 +28,7 @@ published_at: 2025-05-10 12:00
 - Homebrewがインストールされている
 
 :::message
-macOSでns-3.35を使えるようにするまでの手順に関しては、私が以前投稿した[**【macOS】ns-3を使えるようにするまでの手順**](https://zenn.dev/joho0724/articles/sankaku0724-newcreate28)という記事を見ていただけると幸いです。
+macOSでns-3.35を使えるようにするまでの手順に関しては、私が以前投稿した「[**【macOS】ns-3を使えるようにするまでの手順**](https://zenn.dev/joho0724/articles/sankaku0724-newcreate28)」という記事を見ていただけると幸いです。
 また、もし誤解や間違いがあれば、ぜひコメントなどでご指摘していただけると助かります。
 :::
 
