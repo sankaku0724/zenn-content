@@ -8,7 +8,8 @@ topics:
   - "ポエム"
   - "network"
   - "合格体験記"
-published: false
+published: true
+published_at: 2025-05-24 12:00
 ---
 
 ## はじめに
@@ -117,6 +118,7 @@ https://x.com/triangle0724/status/1916334786895118360
 ちなみに合格するとCBT-Solutionsから合格証明書のPDFが発行されます！
 
 ![](/images/sankaku45/IPv6_Result.jpg)
+*ありがとうございます*
 
 また、[日本ネットワーク技術者協会様に合格体験記を応募すると、特別なグッズを貰えます！](https://network-engineer.jp/apply)
 私はIPv6マグカップにしました！
