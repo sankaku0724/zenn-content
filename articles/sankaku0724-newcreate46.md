@@ -5,10 +5,11 @@ type: "tech"
 topics:
   - "ubuntu"
   - "network"
-  - "データ分析"
-  - "ubuntu2404"
+  - "cpp"
+  - "python3"
   - "環境構築"
-published: false
+published: true
+published_at: 2025-07-05 12:00
 ---
 
 ## はじめに
