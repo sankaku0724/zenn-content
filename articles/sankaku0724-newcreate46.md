@@ -56,7 +56,7 @@ sudo apt install -y build-essential python3 python3-dev python3-pip libsqlite3-d
 ここで、`sudo apt install python3`を実行すると、最新のPython3系バージョンがインストールされます。
 
 ![](/images/sankaku46/python12.png)
-*インストールされたPython3のバージョン*
+*私のPCにインストールされたPython3のバージョン*
 
 しかし、今回はns-3.35との動作実績や互換性の観点から3.9系のPythonを使用します。
 そのため、以下の記事を参考にさせていただき、[deadsnakes](https://github.com/deadsnakes)というPPA（個人パッケージアーカイブ）から3.9系のPythonを別途インストールしました。
@@ -73,7 +73,7 @@ sudo apt install -y python3.9 python3.9-dev python3.9-distutils libpython3.9-dev
 これで3.9系のPythonをインストールすることができました。
 
 ![](/images/sankaku46/python9.png)
-*インストールされたPython3.9のバージョン*
+*私のPCにインストールされたPython3.9のバージョン*
 
 ### ns-3を使用できるようにする
 
@@ -100,15 +100,13 @@ tar xjf ns-allinone-3.35.tar.bz2
 cd ns-allinone-3.35/ns-3.35
 ```
 
-移動したら、現在、`ns-allinone-3.35/ns-3.35/`ディレクトリにいるはずです。
-
 ここで、C++ソースコードに修正を加えます。ns-3のコード内部では`uint32_t`のような固定幅整数型が頻繁に使われており、これらは`#include <cstdint>`というヘッダーファイルで定義されています。そのため、以下の3つのC++ソースコードにこのヘッダーファイルを追加記述します。
 
 - `src/network/utils/bit-serializer.h`
 - `src/network/utils/bit-deserializer.h`
 - `src/wifi/model/block-ack-type.h`
 
-#### 1. `bit-serializer.h`の修正
+#### `bit-serializer.h`の修正
 
 好きなエディタでソースコードを編集しましょう。
 
@@ -123,7 +121,7 @@ nano src/network/utils/bit-serializer.h
 #include <cstdint> // ← この行を追加
 ```
 
-#### 2. `bit-deserializer.h`の修正
+#### `bit-deserializer.h`の修正
 
 ```:nanoで編集する場合
 nano src/network/utils/bit-deserializer.h
@@ -136,7 +134,7 @@ nano src/network/utils/bit-deserializer.h
 #include <cstdint> // ← この行を追加
 ```
 
-#### 3. `block-ack-type.h`の修正
+#### `block-ack-type.h`の修正
 
 ```:nanoで編集する場合
 nano src/wifi/model/block-ack-type.h
