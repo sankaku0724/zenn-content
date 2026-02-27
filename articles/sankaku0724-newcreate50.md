@@ -5,7 +5,7 @@ type: "idea"
 topics:
   - "network"
   - "インフラ"
-  - "wifi"
+  - "イベントレポート"
   - "janog"
   - "初心者"
 published: true
@@ -232,7 +232,7 @@ https://x.com/triangle0724/status/2021879830778941540
 
 https://x.com/triangle0724/status/2022147074557694085
 
-JANOGの次の日に、「[さくらインターネット×大阪大学 量子コンピューター見学会](https://sakura-tokyo.connpass.com/event/379158/)」にも行きました！普段触れない領域のお話を聞けてとても有意義でした。
+JANOGの次の日には「[さくらインターネット×大阪大学 量子コンピューター見学会](https://sakura-tokyo.connpass.com/event/379158/)」に参加しました。普段触れない領域のお話を聞けてとても有意義でした！
 
 https://x.com/triangle0724/status/2022556335506948325
 
